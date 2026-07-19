@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/formations", "destination": "/formations.html" }
+  ]
+}
