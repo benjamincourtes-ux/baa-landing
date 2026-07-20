@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merci pour votre achat — Académie Beauty Addict</title>
+<meta name="robots" content="noindex">
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:Arial,sans-serif;
+  background:#0d0600;
+  color:#f5f0e8;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Liserés marbre fond page */
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(201,168,106,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(245,212,138,0.05) 0%, transparent 50%);
+}
+
+.marbre-lines {
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.marbre-lines svg {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.card {
+  background:linear-gradient(135deg,#1a0800,#2d1200);
+  border:1px solid rgba(201,168,106,0.35);
+  border-radius:20px;
+  padding:0;
+  max-width:520px;
+  width:100%;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(201,168,106,0.1);
+}
+
+/* Liserés marbre sur la carte */
+.card::before {
+  content:'';
+  position:absolute;
+  top:60px;
+  left:0;
+  right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,168,106,0.2),rgba(245,212,138,0.3),rgba(201,168,106,0.2),transparent);
+  pointer-events:none;
+}
+.card::after {
+  content:'';
+  position:absolute;
+  bottom:60px;
+  left:0;
+  right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,168,106,0.15),rgba(245,212,138,0.25),rgba(201,168,106,0.15),transparent);
+  pointer-events:none;
+}
+
+.top-bar {
+  height:5px;
+  background:linear-gradient(90deg,#b8860b,#f5d48a,#c9a86a,#f5d48a,#b8860b);
+  border-radius:20px 20px 0 0;
+}
+.bottom-bar {
+  height:5px;
+  background:linear-gradient(90deg,#b8860b,#f5d48a,#c9a86a,#f5d48a,#b8860b);
+  border-radius:0 0 20px 20px;
+}
+
+.card-inner { padding:32px 28px 28px; }
+
+.icon { font-size:52px; margin-bottom:14px; display:block; }
+h1 { font-size:26px; color:#f5d48a; font-weight:normal; font-family:Georgia,serif; margin-bottom:8px; }
+.subtitle { color:rgba(245,240,232,0.6); font-size:13px; margin-bottom:24px; line-height:1.6; }
+
+.ligne-or {
+  width:80px; height:1px;
+  background:linear-gradient(90deg,transparent,#c9a86a,#f5d48a,#c9a86a,transparent);
+  margin:0 auto 24px;
+}
+
+.pack-badge {
+  display:inline-block;
+  background:rgba(201,168,106,0.12);
+  border:1px solid rgba(201,168,106,0.3);
+  color:#f5d48a;
+  padding:8px 20px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:24px;
+}
+
+.steps { text-align:left; margin-bottom:20px; }
+.step {
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:12px 14px;
+  background:rgba(0,0,0,0.25);
+  border-radius:12px;
+  margin-bottom:8px;
+  border:1px solid rgba(201,168,106,0.1);
+  position:relative;
+}
+.step-marbre {
+  position:absolute;
+  bottom:0;
+  left:20px;
+  right:20px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,168,106,0.15),transparent);
+}
+.step-num {
+  width:30px; height:30px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#c9a86a,#f5d48a);
+  color:#1a0a00;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  font-size:13px;
+  flex-shrink:0;
+}
+.step-title { color:#f5d48a; font-size:13px; font-weight:bold; margin-bottom:2px; }
+.step-desc { color:rgba(245,240,232,0.5); font-size:11px; line-height:1.5; }
+
+.affiliation-box {
+  background:rgba(201,168,106,0.07);
+  border:1px solid rgba(201,168,106,0.2);
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:20px;
+  text-align:left;
+  position:relative;
+  overflow:hidden;
+}
+.affiliation-box::before {
+  content:'';
+  position:absolute;
+  top:0; left:20px; right:20px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,168,106,0.4),transparent);
+}
+.aff-title { color:#f5d48a; font-size:12px; font-weight:bold; margin-bottom:4px; }
+.aff-desc { color:rgba(245,240,232,0.5); font-size:11px; margin-bottom:10px; }
+.aff-link {
+  background:rgba(0,0,0,0.35);
+  border-radius:8px;
+  padding:9px 12px;
+  font-family:monospace;
+  font-size:11px;
+  color:#c9a86a;
+  word-break:break-all;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  border:1px solid rgba(201,168,106,0.15);
+}
+.copy-btn {
+  background:linear-gradient(135deg,#c9a86a,#f5d48a);
+  color:#1a0a00;
+  border:none;
+  padding:5px 12px;
+  border-radius:6px;
+  font-size:11px;
+  font-weight:bold;
+  cursor:pointer;
+  flex-shrink:0;
+  touch-action:manipulation;
+}
+
+.btn-main {
+  display:block;
+  width:100%;
+  background:linear-gradient(135deg,#c9a86a,#f5d48a);
+  color:#1a0a00;
+  padding:15px;
+  border-radius:50px;
+  font-weight:bold;
+  font-size:14px;
+  text-decoration:none;
+  margin-bottom:14px;
+  transition:transform 0.2s, box-shadow 0.2s;
+  box-shadow:0 6px 20px rgba(201,168,106,0.3);
+}
+.btn-main:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(201,168,106,0.4); }
+
+.email-info {
+  color:rgba(245,240,232,0.35);
+  font-size:11px;
+  line-height:1.7;
+}
+</style>
+</head>
+<body>
+
+<!-- Liserés marbre fond page -->
+<div class="marbre-lines">
+  <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path d="M0 15 Q25 10 50 18 Q75 26 100 12" fill="none" stroke="#c9a86a" stroke-width="0.08" opacity="0.4"/>
+    <path d="M0 25 Q30 18 60 28 Q80 35 100 20" fill="none" stroke="#f5d48a" stroke-width="0.06" opacity="0.3"/>
+    <path d="M0 75 Q20 70 45 78 Q70 86 100 72" fill="none" stroke="#c9a86a" stroke-width="0.08" opacity="0.4"/>
+    <path d="M0 85 Q35 80 65 88 Q82 93 100 82" fill="none" stroke="#f5d48a" stroke-width="0.06" opacity="0.3"/>
+    <path d="M0 50 Q40 44 70 52 Q88 58 100 46" fill="none" stroke="#c9a86a" stroke-width="0.05" opacity="0.2"/>
+  </svg>
+</div>
+
+<div class="card">
+  <div class="top-bar"></div>
+  <div class="card-inner">
+
+    <span class="icon">🎉</span>
+    <h1>Félicitations !</h1>
+    <p class="subtitle">Votre achat a bien été confirmé.<br>Bienvenue dans la famille Académie Beauty Addict !</p>
+
+    <div class="ligne-or"></div>
+
+    <div class="pack-badge" id="pack-badge">⏳ Chargement...</div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">📧 Vérifiez votre email</div>
+          <div class="step-desc">Vous allez recevoir vos identifiants de connexion ainsi que votre lien d'affiliation personnel dans les prochaines minutes.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">🔐 Connectez-vous</div>
+          <div class="step-desc">Utilisez vos identifiants pour accéder à votre espace formations et commencer votre apprentissage.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">🔗 Partagez votre lien</div>
+          <div class="step-desc">Gagnez 40% de commission sur chaque vente générée via votre lien d'affiliation unique.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="affiliation-box">
+      <div class="aff-title">🔗 Votre lien d'affiliation</div>
+      <div class="aff-desc">Partagez ce lien — gagnez 40% sur chaque vente !</div>
+      <div class="aff-link">
+        <span id="aff-link-text">Vous recevrez votre lien par email</span>
+        <button class="copy-btn" onclick="copierLien()">Copier</button>
+      </div>
+    </div>
+
+    <a href="/espace-formations" class="btn-main">🎓 Accéder à mes formations →</a>
+
+    <p class="email-info">
+      📧 Un email avec vos identifiants a été envoyé à l'adresse utilisée lors du paiement.<br>
+      Vérifiez vos spams si vous ne le recevez pas dans 5 minutes.
+    </p>
+
+  </div>
+  <div class="bottom-bar"></div>
+</div>
+
+<script>
+var urlParams = new URLSearchParams(window.location.search);
+var pack = urlParams.get('pack') || '';
+
+var PACKS_NOMS = {
+  'decouverte': 'MLM Découverte',
+  'fondations': 'MLM Fondations',
+  'elite': 'MLM Elite',
+  'empire': 'MLM Empire',
+  'boutique': 'Boutique clé en main'
+};
+
+var badge = document.getElementById('pack-badge');
+badge.textContent = pack && PACKS_NOMS[pack] ? '✅ ' + PACKS_NOMS[pack] + ' — Accès activé' : '✅ Achat confirmé';
+
+function copierLien() {
+  var lien = document.getElementById('aff-link-text').textContent;
+  if (navigator.clipboard && lien.startsWith('http')) {
+    navigator.clipboard.writeText(lien).then(function() {
+      var btn = document.querySelector('.copy-btn');
+      btn.textContent = '✅ Copié !';
+      setTimeout(function() { btn.textContent = 'Copier'; }, 2000);
+    });
+  }
+}
+</script>
+</body>
+</html>
