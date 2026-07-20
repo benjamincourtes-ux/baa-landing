@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace Formations — Académie Beauty Addict</title>
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:Arial,sans-serif; background:#0d0600; color:#f5f0e8; min-height:100vh; }
+
+/* MARBRE FOND */
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none;
+  background:radial-gradient(ellipse at 20% 20%, rgba(201,168,106,0.06) 0%, transparent 50%),
+             radial-gradient(ellipse at 80% 80%, rgba(245,212,138,0.05) 0%, transparent 50%);
+}
+
+/* BARRE TOP */
+.topbar {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  background:rgba(13,6,0,0.95); backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(201,168,106,0.2);
+  padding:12px 20px; display:flex; align-items:center; justify-content:space-between;
+}
+.topbar-logo { color:#f5d48a; font-family:Georgia,serif; font-size:15px; text-decoration:none; }
+.topbar-user { color:#c9a86a; font-size:13px; font-family:Arial,sans-serif; display:flex; align-items:center; gap:10px; }
+.btn-logout { background:none; border:1px solid rgba(201,168,106,0.3); color:#c9a86a; padding:5px 12px; border-radius:20px; font-size:12px; cursor:pointer; }
+
+/* LOGIN PAGE */
+#login-page {
+  min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px;
+}
+.login-card {
+  background:linear-gradient(135deg,#1a0800,#2d1200);
+  border:1px solid rgba(201,168,106,0.35);
+  border-radius:20px; padding:0; max-width:420px; width:100%;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(201,168,106,0.1);
+}
+.gold-bar { height:5px; background:linear-gradient(90deg,#b8860b,#f5d48a,#c9a86a,#f5d48a,#b8860b); border-radius:20px 20px 0 0; }
+.gold-bar-bottom { height:5px; background:linear-gradient(90deg,#b8860b,#f5d48a,#c9a86a,#f5d48a,#b8860b); border-radius:0 0 20px 20px; }
+.login-inner { padding:32px 28px 28px; text-align:center; }
+.login-icon { font-size:40px; margin-bottom:14px; }
+.login-title { font-family:Georgia,serif; font-size:22px; color:#f5d48a; margin-bottom:6px; font-weight:normal; }
+.login-sub { color:rgba(245,240,232,0.5); font-size:13px; margin-bottom:24px; }
+.ligne-or { width:60px; height:1px; background:linear-gradient(90deg,transparent,#c9a86a,#f5d48a,#c9a86a,transparent); margin:0 auto 24px; }
+.field-label { display:block; text-align:left; color:#c9a86a; font-size:11px; font-weight:bold; margin-bottom:6px; letter-spacing:1px; }
+.field-input {
+  width:100%; padding:12px 14px; background:rgba(0,0,0,0.3);
+  border:1px solid rgba(201,168,106,0.2); border-radius:10px;
+  font-size:14px; color:#f5f0e8; margin-bottom:16px;
+  font-family:Arial,sans-serif; outline:none; transition:border-color 0.2s;
+}
+.field-input:focus { border-color:rgba(201,168,106,0.5); }
+.btn-login {
+  width:100%; background:linear-gradient(135deg,#c9a86a,#f5d48a);
+  color:#1a0a00; border:none; padding:14px; border-radius:50px;
+  font-weight:bold; font-size:15px; cursor:pointer; margin-bottom:12px;
+  transition:transform 0.2s; touch-action:manipulation;
+}
+.btn-login:hover { transform:translateY(-1px); }
+.login-error { color:#e74c3c; font-size:12px; margin-bottom:12px; display:none; }
+.login-info { color:rgba(245,240,232,0.35); font-size:11px; line-height:1.6; }
+
+/* DASHBOARD */
+#dashboard-page { display:none; padding-top:60px; }
+
+.sidebar {
+  position:fixed; left:0; top:60px; bottom:0; width:260px;
+  background:rgba(10,4,0,0.95); border-right:1px solid rgba(201,168,106,0.15);
+  overflow-y:auto; padding:20px 0; z-index:50;
+}
+.sidebar-section { padding:0 16px; margin-bottom:20px; }
+.sidebar-title { color:#c9a86a; font-size:10px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+
+.module-item {
+  display:flex; align-items:center; gap:10px; padding:10px 12px;
+  border-radius:10px; margin-bottom:4px; cursor:pointer;
+  transition:background 0.2s; border:1px solid transparent;
+  touch-action:manipulation;
+}
+.module-item:hover { background:rgba(201,168,106,0.08); }
+.module-item.active { background:rgba(201,168,106,0.12); border-color:rgba(201,168,106,0.2); }
+.module-item.locked { opacity:0.4; cursor:not-allowed; }
+.module-num {
+  width:28px; height:28px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:bold;
+}
+.module-num.done { background:linear-gradient(135deg,#27AE60,#2ecc71); color:white; }
+.module-num.current { background:linear-gradient(135deg,#c9a86a,#f5d48a); color:#1a0a00; }
+.module-num.locked { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.3); }
+.module-label { font-size:12px; color:#f5f0e8; line-height:1.3; flex:1; }
+.module-item.locked .module-label { color:rgba(255,255,255,0.3); }
+
+.progress-bar-wrap { background:rgba(255,255,255,0.1); border-radius:4px; height:6px; margin:8px 16px 16px; overflow:hidden; }
+.progress-bar-fill { height:6px; border-radius:4px; background:linear-gradient(90deg,#c9a86a,#f5d48a); transition:width 0.5s; }
+
+.tools-item {
+  display:flex; align-items:center; gap:10px; padding:10px 12px;
+  border-radius:10px; margin-bottom:4px; cursor:pointer;
+  transition:background 0.2s; color:#f5f0e8; font-size:12px;
+}
+.tools-item:hover { background:rgba(201,168,106,0.08); }
+
+/* CONTENU PRINCIPAL */
+.main-content { margin-left:260px; padding:30px; min-height:calc(100vh - 60px); }
+
+/* MODULE PAGE */
+.module-header { margin-bottom:30px; }
+.module-badge { display:inline-block; background:rgba(201,168,106,0.15); border:1px solid rgba(201,168,106,0.3); color:#c9a86a; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:bold; letter-spacing:1px; margin-bottom:12px; }
+.module-title { font-family:Georgia,serif; font-size:28px; color:#f5d48a; font-weight:normal; margin-bottom:8px; }
+.module-desc { color:rgba(245,240,232,0.6); font-size:14px; line-height:1.7; }
+
+/* SECTIONS MODULE */
+.section-block {
+  background:linear-gradient(135deg,rgba(26,8,0,0.8),rgba(45,18,0,0.6));
+  border:1px solid rgba(201,168,106,0.15); border-radius:16px;
+  padding:24px; margin-bottom:20px; position:relative; overflow:hidden;
+}
+.section-block::before {
+  content:''; position:absolute; top:0; left:20px; right:20px; height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,168,106,0.3),transparent);
+}
+.section-icon { font-size:20px; margin-bottom:10px; }
+.section-title { color:#f5d48a; font-size:16px; font-weight:bold; margin-bottom:12px; font-family:Georgia,serif; }
+.section-text { color:rgba(245,240,232,0.75); font-size:14px; line-height:1.8; }
+.section-text p { margin-bottom:12px; }
+.section-text strong { color:#f5d48a; }
+.section-text ul { margin:8px 0 8px 20px; }
+.section-text ul li { margin-bottom:6px; }
+
+/* VIDEO PLAYER */
+.video-container { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; background:#000; }
+.video-container iframe { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:12px; }
+.video-placeholder {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; background:rgba(0,0,0,0.5);
+  border-radius:12px; border:2px dashed rgba(201,168,106,0.3);
+}
+.video-placeholder p { color:rgba(245,240,232,0.5); font-size:13px; text-align:center; }
+
+/* POINTS CLES */
+.key-points { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+.key-point {
+  background:rgba(201,168,106,0.08); border:1px solid rgba(201,168,106,0.2);
+  border-radius:10px; padding:14px; display:flex; gap:10px; align-items:flex-start;
+}
+.key-point-icon { font-size:18px; flex-shrink:0; }
+.key-point-text { color:rgba(245,240,232,0.75); font-size:13px; line-height:1.5; }
+
+/* OUTILS */
+.tools-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
+.tool-card {
+  background:rgba(0,0,0,0.3); border:1px solid rgba(201,168,106,0.2);
+  border-radius:12px; padding:16px; text-align:center; cursor:pointer;
+  transition:border-color 0.2s, transform 0.2s; text-decoration:none;
+}
+.tool-card:hover { border-color:rgba(201,168,106,0.5); transform:translateY(-2px); }
+.tool-icon { font-size:28px; margin-bottom:8px; }
+.tool-name { color:#f5d48a; font-size:13px; font-weight:bold; margin-bottom:4px; }
+.tool-desc { color:rgba(245,240,232,0.5); font-size:11px; }
+
+/* QUIZ */
+.quiz-question { margin-bottom:20px; }
+.quiz-q { color:#f5d48a; font-size:14px; font-weight:bold; margin-bottom:12px; line-height:1.5; }
+.quiz-options { display:flex; flex-direction:column; gap:8px; }
+.quiz-option {
+  display:flex; align-items:center; gap:10px; padding:12px 14px;
+  background:rgba(0,0,0,0.2); border:1px solid rgba(201,168,106,0.15);
+  border-radius:10px; cursor:pointer; transition:all 0.2s; touch-action:manipulation;
+}
+.quiz-option:hover { background:rgba(201,168,106,0.08); border-color:rgba(201,168,106,0.3); }
+.quiz-option.selected { background:rgba(201,168,106,0.15); border-color:#c9a86a; }
+.quiz-option.correct { background:rgba(39,174,96,0.15); border-color:#27AE60; }
+.quiz-option.wrong { background:rgba(231,76,60,0.15); border-color:#e74c3c; }
+.quiz-radio { width:18px; height:18px; border-radius:50%; border:2px solid rgba(201,168,106,0.4); flex-shrink:0; }
+.quiz-option.selected .quiz-radio { background:#c9a86a; border-color:#c9a86a; }
+.quiz-option-text { font-size:13px; color:rgba(245,240,232,0.8); }
+
+.btn-quiz {
+  background:linear-gradient(135deg,#c9a86a,#f5d48a); color:#1a0a00;
+  border:none; padding:14px 30px; border-radius:50px; font-weight:bold;
+  font-size:14px; cursor:pointer; margin-top:16px; touch-action:manipulation;
+  transition:transform 0.2s;
+}
+.btn-quiz:hover { transform:translateY(-1px); }
+.quiz-result { margin-top:16px; padding:16px; border-radius:12px; text-align:center; display:none; }
+.quiz-result.success { background:rgba(39,174,96,0.15); border:1px solid #27AE60; }
+.quiz-result.fail { background:rgba(231,76,60,0.15); border:1px solid #e74c3c; }
+.quiz-result-title { font-size:18px; font-weight:bold; margin-bottom:6px; }
+.quiz-result.success .quiz-result-title { color:#27AE60; }
+.quiz-result.fail .quiz-result-title { color:#e74c3c; }
+.quiz-result-text { font-size:13px; color:rgba(245,240,232,0.7); }
+
+/* CERTIFICAT */
+.certificat-page {
+  min-height:calc(100vh - 60px);
+  display:flex; align-items:center; justify-content:center; padding:30px;
+}
+.certificat-card {
+  background:linear-gradient(135deg,#1a0800,#2d1200);
+  border:2px solid #c9a86a; border-radius:20px; padding:40px;
+  max-width:600px; width:100%; text-align:center;
+  box-shadow:0 0 60px rgba(201,168,106,0.2);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  .sidebar { display:none; }
+  .main-content { margin-left:0; padding:20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar" id="topbar" style="display:none;">
+  <a href="/" class="topbar-logo">🐦‍🔥 Académie Beauty Addict</a>
+  <div class="topbar-user">
+    <span id="user-display">Chargement...</span>
+    <button class="btn-logout" onclick="deconnecter()">Déconnexion</button>
+  </div>
+</div>
+
+<!-- PAGE LOGIN -->
+<div id="login-page">
+  <div class="login-card">
+    <div class="gold-bar"></div>
+    <div class="login-inner">
+      <div class="login-icon">🎓</div>
+      <h1 class="login-title">Espace Formations</h1>
+      <p class="login-sub">Connectez-vous pour accéder à vos formations</p>
+      <div class="ligne-or"></div>
+      <label class="field-label">IDENTIFIANT</label>
+      <input type="text" class="field-input" id="login-id" placeholder="Votre identifiant" autocomplete="username"/>
+      <label class="field-label">MOT DE PASSE</label>
+      <input type="password" class="field-input" id="login-pwd" placeholder="Votre mot de passe" autocomplete="current-password"/>
+      <p class="login-error" id="login-error">Identifiant ou mot de passe incorrect.</p>
+      <button class="btn-login" onclick="seConnecter()">Se connecter →</button>
+      <p class="login-info">Vous avez acheté une formation et n'avez pas encore reçu vos identifiants ?<br>Vérifiez vos spams ou contactez-nous.</p>
+    </div>
+    <div class="gold-bar-bottom"></div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard-page">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Ma progression</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+      <div style="color:rgba(245,240,232,0.5);font-size:11px;padding:0 16px 8px;text-align:center;" id="progress-text">0% complété</div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Mes modules</div>
+      <div id="modules-list"></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Mes outils</div>
+      <div class="tools-item" onclick="afficherOutils()">
+        <span>🔧</span> Tous mes outils
+      </div>
+      <div class="tools-item" onclick="afficherCertificat()">
+        <span>🏆</span> Mon certificat
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENU PRINCIPAL -->
+  <div class="main-content" id="main-content">
+    <p style="color:#999;text-align:center;padding:60px;">Sélectionnez un module pour commencer.</p>
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+<script>
+firebase.initializeApp({
+  apiKey:"AIzaSyC94wzVrEtrqxhshdFsRHR7HiL5wJEkYG0",
+  authDomain:"beauty-addict-academy.firebaseapp.com",
+  projectId:"beauty-addict-academy",
+  storageBucket:"beauty-addict-academy.firebasestorage.app",
+  messagingSenderId:"311669980538",
+  appId:"1:311669980538:web:eaf8a95e987473c6412ac3"
+});
+var db = firebase.firestore();
+
+// =====================
+// DONNÉES DES FORMATIONS
+// =====================
+var FORMATIONS = {
+  'decouverte': {
+    nom: 'MLM Découverte',
+    modules: [
+      {
+        id: 'dec-1',
+        titre: "Qu'est-ce que le MLM réellement",
+        intro: "Avant de te lancer, il est essentiel de comprendre ce qu'est vraiment le Marketing de Réseau — sans les mythes, sans les mensonges, et avec toute la réalité d'un métier qui mérite d'être pris au sérieux.",
+        contenu: [
+          "<strong>Mon histoire avec le MLM — et probablement la tienne</strong><br><br>Le MLM, je l'ai découvert bien avant de comprendre ce que c'était. Ma grand-mère travaillait pour Avon, puis Tupperware, et enfin Herbalife — on parle des années 90, à une époque où personne n'appelait ça du \"MLM\". C'était juste une femme qui vendait des produits qu'elle aimait, qui organisait des réunions chez elle, et qui gagnait sa vie dignement.<br><br>Des années plus tard, je retombe dessus en scrollant sur les réseaux sociaux. Complètement par hasard. Et là, mon premier réflexe ? La méfiance totale.",
+          "<strong>Les préjugés que tu as probablement toi aussi</strong><br><br>Soyons honnêtes — quand on entend \"MLM\" pour la première fois, on pense souvent à :<ul><li>Une arnaque déguisée</li><li>Des gens qui vendent des produits qu'ils ne connaissent même pas</li><li>Un système de \"m'as-tu-vu\" où l'apparence compte plus que la réalité</li><li>Ces messages privés gênants du genre \"chérie t'as pensé à ton avenir ?\"</li></ul>Ces préjugés, je les avais tous. Et je ne te dirai pas qu'ils sont complètement faux — parce qu'il existe effectivement des gens qui font du MLM exactement comme ça, et c'est eux qui donnent mauvaise réputation au secteur.",
+          "<strong>Ce qui m'a fait changer d'avis</strong><br><br>Un jour, je tombe sur une femme qui parle de sa société différemment. Pas de discours commercial. Pas de promesses de richesse rapide. Elle testait ses produits devant la caméra, elle était naturelle, elle était elle-même. Elle parlait avec passion — pas pour vendre, mais parce qu'elle croyait vraiment en ce qu'elle faisait.<br><br>C'est ce moment-là qui m'a tout changé. J'ai compris que le problème n'était pas le MLM en lui-même — c'était la façon dont certaines personnes le pratiquaient.",
+          "<strong>La vérité que personne ne te dit au départ</strong><br><br>Le MLM est un véritable métier. Pas un passe-temps. Pas un side-project qu'on fait entre deux épisodes de série. Un métier — avec tout ce que ça implique :<ul><li>De la régularité et de la discipline quotidienne</li><li>Des compétences à acquérir (vente, communication, gestion)</li><li>Des hauts et des bas, comme dans tout vrai business</li><li>Une passion pour ce qu'on fait et pour les produits qu'on vend</li></ul>C'est un métier dur. Je ne vais pas te mentir. Mais c'est un métier passion — et quand tu trouves la société qui correspond vraiment à tes valeurs et à tes goûts, ça change tout.",
+          "<strong>L'erreur que tu dois absolument éviter</strong><br><br>La plus grande erreur que font les débutants ? Se lancer dans une société uniquement pour le plan de rémunération.<br><br>\"Oh, ils payent 40% de commission, c'est incroyable !\" — Et trois mois plus tard, ils abandonnent parce qu'ils n'aimaient pas les produits, qu'ils ne croyaient pas à ce qu'ils vendaient, et que leurs clientes le sentaient.<br><br><strong>La règle d'or :</strong> Choisis une société dont tu utiliseras toi-même les produits tous les jours. Parce que la passion ne se joue pas — et tes clientes voient immédiatement si tu es authentique ou pas.",
+          "<strong>Alors, c'est quoi le MLM concrètement ?</strong><br><br>Le Marketing de Réseau (MLM) est un système de distribution où des produits sont vendus directement par des conseillers indépendants — sans magasin, sans intermédiaire. Tu es ton propre patron, tu travailles à ton rythme, depuis chez toi ou de n'importe où.<br><br>La différence avec une arnaque pyramidale ? Simple : en MLM légal, l'argent vient de la <strong>vente de vrais produits à de vraies clientes</strong>. Pas du recrutement. Si quelqu'un te dit que tu vas gagner de l'argent juste en recrutant des gens sans vendre quoi que ce soit — fuis.<br><br>Les 3 sources de revenus en MLM légal :<ul><li><strong>Tes ventes directes</strong> — tu vends, tu gagnes</li><li><strong>Les ventes de ton équipe</strong> — si tu deviens leader, tu touches un pourcentage sur ce que vend ton équipe</li><li><strong>Les bonus et primes</strong> — selon les paliers et objectifs atteints dans ta société</li></ul>",
+          "<strong>Ce que cette formation va changer pour toi</strong><br><br>Dans les modules qui suivent, tu vas apprendre tout ce que la plupart des gens dans le MLM n'apprennent jamais — parce que personne ne leur a enseigné :<ul><li>Comment choisir et comprendre ton statut juridique</li><li>Comment utiliser les réseaux sociaux avec intelligence</li><li>Les vraies techniques de vente et de closing</li><li>Comment gérer les objections sans perdre ses moyens</li><li>Comment construire une routine gagnante</li></ul>Bienvenue dans la réalité du MLM. Pas la version Instagram — la version qui fonctionne vraiment."
+        ],
+        pointsCles: [
+          { icon: "💡", text: "Le MLM est un vrai métier — pas un passe-temps. Il demande régularité, compétences et passion." },
+          { icon: "⚠️", text: "Ne choisis jamais une société pour son plan de rémunération. Choisis-la pour ses produits." },
+          { icon: "🎯", text: "En MLM légal, l'argent vient de la vente de produits réels — pas du recrutement." },
+          { icon: "🔑", text: "L'authenticité est ta meilleure arme commerciale. Les clientes sentent si tu crois en ce que tu vends." }
+        ],
+        video: null,
+        outils: ['coach-ia', 'checklist'],
+        quiz: [
+          { q: "Selon ce module, quelle est la plus grande erreur que font les débutants en MLM ?", options: ["Vendre trop rapidement sans connaître les produits", "Se lancer uniquement pour le plan de rémunération", "Ne pas utiliser les réseaux sociaux", "Prospecter trop de personnes en même temps"], bonne: 1 },
+          { q: "Quelle est la différence fondamentale entre le MLM légal et une pyramide illégale ?", options: ["Le nombre de niveaux de commission", "Le prix des produits", "L'argent vient de ventes réelles et non du recrutement", "Le nombre de membres dans l'équipe"], bonne: 2 },
+          { q: "Combien de sources de revenus principales existe-t-il en MLM légal ?", options: ["1 — uniquement les ventes directes", "2 — ventes et recrutement", "3 — ventes, équipe et bonus", "4 — ventes, équipe, bonus et formations"], bonne: 2 },
+          { q: "Pourquoi l'authenticité est-elle essentielle en MLM ?", options: ["Pour avoir plus de followers sur les réseaux", "Parce que les clientes sentent si tu crois vraiment en ce que tu vends", "Pour éviter les problèmes juridiques", "Pour recruter plus facilement"], bonne: 1 },
+          { q: "Comment le fondateur de cette formation a-t-il découvert le MLM pour la première fois ?", options: ["Sur les réseaux sociaux", "Dans une réunion d'entreprise", "Via sa grand-mère qui travaillait pour Avon, Tupperware et Herbalife", "En lisant un livre sur l'entrepreneuriat"], bonne: 2 }
+        ]
+      },
+      {
+        id: 'dec-2',
+        titre: "VDI vs Auto-entrepreneur — Les différences",
+        intro: "Avant de commencer à vendre, tu dois choisir ton statut juridique. C'est une décision qui impacte directement tes revenus, tes obligations et ta liberté. Je vais te partager mon expérience personnelle pour que tu évites les erreurs que j'ai faites — et celles que j'ai vu faire autour de moi.",
+        contenu: [
+          "<strong>Comment j'ai démarré — et pourquoi le VDI était le bon choix</strong><br><br>Quand j'ai commencé dans le MLM, j'ai choisi le statut VDI. Pas parce que j'avais tout analysé en détail — mais parce que c'était le plus simple et le plus accessible. Pas besoin de déclarer immédiatement à l'URSSAF, pas de paperasse au départ, pas de formalités compliquées.<br><br>Et franchement ? C'était la bonne décision pour me lancer. Le VDI m'a permis de tester, de me faire la main, de construire ma clientèle — sans pression administrative.",
+          "<strong>Le statut VDI — Ce qu'il faut savoir</strong><br><br>Le VDI (Vendeur à Domicile Indépendant) est un statut spécialement créé pour les activités de vente directe en France. Voici comment ça fonctionne :<ul><li><strong>En dessous de 500€ par trimestre :</strong> tu n'as rien à déclarer à l'URSSAF. Tu vends, tu encaisses, c'est tout.</li><li><strong>Au-delà de 500€ par trimestre :</strong> tu dois te déclarer comme VDI et payer des cotisations sociales sur tes revenus.</li><li><strong>Pas de SIRET, pas de formalités</strong> au démarrage — tu commences à vendre immédiatement.</li><li><strong>Protection sociale</strong> : si ton conjoint est salarié, tu bénéficies de sa couverture. Sinon, tu peux cotiser pour ta propre protection.</li></ul>Le VDI est parfait pour débuter, tester le MLM, et voir si cette activité te convient vraiment.",
+          "<strong>Pourquoi je suis passé en Auto-entrepreneur après 1 an</strong><br><br>Un an après mes débuts, mes revenus avaient bien augmenté. Mon équipe grandissait, mes ventes aussi — et j'ai compris que le VDI ne suffisait plus. C'est là que j'ai fait le saut vers l'auto-entrepreneur.<br><br>Honnêtement ? Au départ, ça a été compliqué. Je me suis retrouvé seul face à des documents que je ne comprenais pas, des délais à respecter, des déclarations à faire. Personne ne m'avait expliqué tout ça. C'est précisément pour ça que ce module existe — pour que toi, tu ne sois pas seul face à cette transition.",
+          "<strong>Le statut Auto-entrepreneur — Ce qu'il faut savoir</strong><br><br>L'auto-entrepreneur (aussi appelé micro-entrepreneur) c'est un vrai statut professionnel. Tu t'inscris sur <strong>autoentrepreneur.urssaf.fr</strong> et tu obtiens un numéro SIRET — ta carte d'identité professionnelle.<br><br>Les avantages :<ul><li><strong>Un SIRET</strong> — tu peux établir de vraies factures, tu es crédible aux yeux de tes clientes</li><li><strong>Plus de liberté</strong> — tu gères ton activité comme une vraie entreprise</li><li><strong>Meilleure protection sociale</strong> — retraite, maladie, tout est proportionnel à ce que tu gagnes</li><li><strong>Déductible de certaines charges</strong> — matériel, formation, déplacements</li></ul>Les obligations :<ul><li>Déclarer ton chiffre d'affaires <strong>chaque trimestre</strong> sur autoentrepreneur.urssaf.fr</li><li>Payer <strong>22% de cotisations</strong> sur ton CA brut — même si tu n'as rien gagné ce trimestre</li><li>Ne pas dépasser <strong>77 700€ de CA annuel</strong> (seuil 2024) — au-delà, tu sors du régime micro</li></ul>",
+          "<strong>Comment déclarer à l'URSSAF — étape par étape</strong><br><br><strong>En tant que VDI :</strong><ul><li>Rendez-vous sur <strong>autoentrepreneur.urssaf.fr</strong></li><li>Si tes commissions dépassent 500€ par trimestre → tu dois te déclarer comme VDI</li><li>Ta société MLM te fournit généralement un <strong>bulletin de précompte trimestriel</strong> qui récapitule tes commissions et les cotisations déjà prélevées</li><li>À la déclaration d'impôts annuelle : utilise le formulaire <strong>2042-C PRO</strong></li><li>Case à remplir : <strong>5HQ</strong> (revenus non commerciaux professionnels) — l'administration applique automatiquement un abattement de 34%</li><li>⚠️ Ne déduis rien toi-même — laisse l'administration calculer</li></ul><br><strong>En tant qu'Auto-entrepreneur :</strong><ul><li>Connecte-toi sur <strong>autoentrepreneur.urssaf.fr</strong></li><li>Clique sur <strong>\"Mon auto-entreprise au quotidien\"</strong> → <strong>\"Mon échéance en cours\"</strong> → <strong>\"Déclarer et payer\"</strong></li><li>Renseigne ton <strong>chiffre d'affaires brut encaissé</strong> du trimestre (ou du mois si tu as choisi la mensualité)</li><li>Le taux de cotisations pour la vente directe : <strong>22%</strong></li><li>À la déclaration d'impôts annuelle : ton CA va dans la case <strong>5TA ou 5TB</strong> selon ta situation fiscale</li></ul>",
+          "<strong>Et la CAF — ce que tu dois absolument savoir</strong><br><br>Si tu perçois des aides de la CAF (RSA, prime d'activité, APL...), tu as l'obligation de déclarer tes revenus MLM. Beaucoup de gens l'ignorent et se retrouvent avec des trop-perçus à rembourser — parfois des années après.<br><br><strong>Comment déclarer à la CAF :</strong><ul><li>Connecte-toi sur <strong>caf.fr</strong> → \"Mon espace privé\" → \"Mes services en ligne\" → \"Déclarer mes ressources\"</li><li>La CAF demande une <strong>déclaration trimestrielle</strong> de tes revenus</li><li>Depuis mars 2025, certains revenus sont pré-remplis automatiquement — mais vérifie toujours</li><li>Pour le <strong>RSA et la prime d'activité</strong> : déclare le <strong>montant net social</strong> de tes commissions (indiqué sur ton bulletin de précompte)</li><li>Pour le <strong>VDI mandataire</strong> : déclare tes commissions brutes après abattement de 34%</li></ul><br>⚠️ <strong>La règle absolue :</strong> Déclare tout. Même si tu penses que ça va diminuer tes aides — ne pas déclarer, c'est du \"travail dissimulé\" aux yeux de la CAF, et les conséquences peuvent être très lourdes (remboursement de plusieurs années d'aides + pénalités).",
+          "<strong>L'erreur qui peut coûter très cher — et que j'ai vu de près</strong><br><br>Une connaissance a fait une erreur grave : elle est passée en auto-entrepreneur mais <strong>ne déclarait pas ses revenus à l'URSSAF</strong>. Elle pensait que personne ne verrait rien.<br><br>Ce qu'elle a risqué — et ce que tu risques si tu fais pareil :<ul><li><strong>Redressement fiscal</strong> — l'administration peut réclamer toutes les cotisations impayées sur plusieurs années, avec des pénalités de retard</li><li><strong>Amendes</strong> pouvant atteindre plusieurs milliers d'euros</li><li><strong>Interdiction d'exercer</strong> une activité commerciale dans les cas les plus graves</li><li><strong>Poursuites pénales</strong> pour travail dissimulé — jusqu'à 3 ans d'emprisonnement et 45 000€ d'amende</li></ul>Ce n'est pas la peine. Déclare honnêtement, paie tes 22% et dors tranquille.",
+          "<strong>Mon conseil numéro 1 pour choisir ton statut</strong><br><br><strong>Tu démarres ?</strong> → Inscris-toi en VDI. C'est simple, gratuit, et ça te permet de tester sans risque.<br><br><strong>Tu as une équipe qui grandit et un revenu régulier ?</strong> → Passe en auto-entrepreneur. Surtout si ton chiffre dépasse régulièrement 500€ par trimestre — à ce niveau, le statut AE est plus avantageux et plus protecteur.<br><br><strong>La règle simple :</strong> VDI pour commencer, AE pour professionnaliser. Et si tu hésites, n'hésite pas à contacter l'URSSAF directement — ils ont des conseillers gratuits qui peuvent t'accompagner dans cette transition."
+        ],
+        pointsCles: [
+          { icon: "🚀", text: "VDI = démarrage immédiat sans formalités. Idéal pour tester le MLM sans risque." },
+          { icon: "💼", text: "Auto-entrepreneur = plus de liberté, un SIRET, une vraie crédibilité professionnelle." },
+          { icon: "⚠️", text: "Ne jamais oublier de déclarer ses revenus à l'URSSAF — les conséquences peuvent être très graves." },
+          { icon: "📈", text: "Commence en VDI, passe en AE quand ton revenu est régulier et ton équipe grandit." }
+        ],
+        video: null,
+        outils: ['coach-ia', 'checklist'],
+        quiz: [
+          { q: "En dessous de quel montant par trimestre un VDI n'a pas besoin de se déclarer à l'URSSAF ?", options: ["100€", "250€", "500€", "1000€"], bonne: 2 },
+          { q: "Quel est le taux de cotisations sociales pour un auto-entrepreneur en vente ?", options: ["10%", "15%", "22%", "30%"], bonne: 2 },
+          { q: "Quelle est la conséquence principale de ne pas déclarer ses revenus en tant qu'auto-entrepreneur ?", options: ["Un simple avertissement", "La perte du statut VDI", "Un redressement fiscal avec amendes et pénalités pouvant aller jusqu'à des poursuites pénales", "L'interdiction de vendre sur les réseaux sociaux"], bonne: 2 },
+          { q: "Quel statut est recommandé pour démarrer dans le MLM ?", options: ["Auto-entrepreneur directement", "VDI pour tester sans risque", "Société à responsabilité limitée", "Portage salarial"], bonne: 1 },
+          { q: "Quand est-il conseillé de passer du statut VDI à l'auto-entrepreneur ?", options: ["Dès le premier euro gagné", "Après 5 ans d'activité", "Quand le revenu est régulier et que l'équipe grandit", "Uniquement si on dépasse 10 000€ par mois"], bonne: 2 }
+        ]
+      },
+      {
+        id: 'dec-3',
+        titre: "Les réseaux sociaux et leurs algorithmes",
+        intro: "Depuis 2017, les réseaux sociaux sont mon bureau principal. J'ai tout essayé, tout raté, tout réappris — et aujourd'hui je vais te partager ce que j'aurais aimé savoir dès le départ pour ne pas perdre des années à faire les mauvaises choses.",
+        contenu: [
+          "<strong>Mon parcours sur les réseaux — depuis 2017</strong><br><br>Quand j'ai commencé à utiliser les réseaux pour mon activité en 2017, je ne savais pas vraiment ce que je faisais. J'ai commencé sur Facebook — parce que c'était le réseau que je connaissais, le plus familial, le plus proche des gens réels.<br><br>Aujourd'hui, Facebook reste mon réseau principal. Je l'ai relié à Instagram pour que mes publications et mes stories apparaissent automatiquement sur les deux — sans double travail. Et ça m'a permis d'être présent sur les deux plateformes sans y passer deux fois plus de temps.",
+          "<strong>Comment relier Facebook et Instagram — étape par étape</strong><br><br>Lier tes deux comptes te permet de publier une seule fois et d'être présent partout. Voici comment faire :<br><br><strong>Pour les publications :</strong><ul><li>Va dans les <strong>paramètres de ta page Facebook</strong> (ou profil professionnel)</li><li>Cherche <strong>\"Instagram\"</strong> dans le menu</li><li>Clique sur <strong>\"Connecter un compte\"</strong> et connecte-toi à ton compte Instagram</li><li>Une fois lié, quand tu publies sur Facebook tu peux choisir de partager automatiquement sur Instagram</li></ul><strong>Pour les stories :</strong><ul><li>Sur Instagram, quand tu crées une story, appuie sur <strong>\"Partager\"</strong> puis active <strong>\"Partager sur Facebook\"</strong></li><li>Tu peux aussi l'activer par défaut dans les paramètres Instagram → \"Partage de stories sur Facebook\"</li></ul>⚠️ Note importante : Facebook et Instagram ont des formats légèrement différents — une vidéo verticale fonctionne mieux sur les deux, mais une image horizontale peut être recadrée automatiquement.",
+          "<strong>La publication qui a tout changé — 200k vues, 5k likes, 8k commentaires</strong><br><br>Un jour, j'ai publié une vidéo où je ne me prenais pas du tout au sérieux. Pas de discours commercial, pas de présentation de produits. Juste moi — naturel, authentique, en train de faire quelque chose de drôle.<br><br>Résultat : 200 000 vues. 5 000 likes. 8 000 commentaires.<br><br>Cette vidéo m'a appris la leçon la plus importante de ma vie sur les réseaux : <strong>les gens ne suivent pas des vendeurs — ils suivent des personnes.</strong> Ce qu'ils veulent voir, c'est toi. Pas tes produits. Toi.",
+          "<strong>Les erreurs que font 90% des gens en MLM sur les réseaux</strong><br><br><strong>❌ Erreur 1 — Pas de bio ou une bio inutile</strong><br>Ta bio c'est ta carte de visite. Si elle est vide ou qu'elle dit \"maman de 3 amours 🌸 vie saine 🌿\", personne ne comprend ce que tu fais. Ta bio doit expliquer en 2 lignes qui tu es et ce que tu proposes.<br><br><strong>❌ Erreur 2 — Un pseudo incompréhensible</strong><br>\"MesEnfantsMaVie2017\" ou \"JaimeLesDauphins87\" — personne ne peut te retrouver. Ton pseudo doit être ton <strong>prénom et ton nom</strong>. Point. Les gens doivent pouvoir te retrouver facilement quand ils cherchent ton nom sur Google ou sur Facebook.<br><br><strong>❌ Erreur 3 — Une mauvaise photo de profil</strong><br>Photo sombre, photo de ton chien, photo de tes enfants, avatar ou personnage de dessin animé — tout ça dit \"je ne suis pas professionnel\". Ta photo de profil doit être toi, souriant, en pleine lumière. C'est la première chose que les gens voient. Elle doit inspirer confiance.<br><br><strong>❌ Erreur 4 — Une photo de couverture avec le logo ou les produits de ta société</strong><br>Ta couverture ne doit pas ressembler à une pub MLM. Elle doit te ressembler — une belle photo de toi, un paysage qui te représente, quelque chose d'accueillant. Les gens viennent sur TON profil — pas sur la page officielle de ta société.<br><br><strong>❌ Erreur 5 — Obsession des likes et commentaires</strong><br>Arrête de regarder les likes. Ce qui compte, c'est le nombre de <strong>vues</strong>. Beaucoup de gens regardent tes publications en sous-marin — ils ne likent pas, ne commentent pas, mais ils te suivent depuis des semaines. Ils observent comment tu parles de ton activité, comment tu vis, si tu es constante. Et un jour, ils envoient un message privé.",
+          "<strong>❌ Erreur 6 — L'inconstance et le trop-plein</strong><br><br>Deux types de personnes échouent sur les réseaux :<ul><li>Celles qui publient 5 posts dans la journée puis disparaissent pendant 3 semaines</li><li>Celles qui oublient complètement les stories et ne font que des publications classiques</li></ul>L'algorithme récompense la <strong>régularité</strong>. Mieux vaut 1 publication par jour tous les jours qu'une rafale de 10 publications puis le silence.<br><br>Les <strong>stories</strong> sont cruciales — elles gardent ta communauté engagée au quotidien, même les jours où tu ne publies pas de post. Elles montrent ta vie réelle, ton quotidien, tes coulisses.",
+          "<strong>Le conseil que j'aurais aimé avoir dès le départ</strong><br><br><strong>NE PARLE PAS DE TA SOCIÉTÉ TOUS LES JOURS.</strong><br><br>C'est l'erreur numéro 1 que j'ai faite, et que je vois encore faire tous les jours. Quand tu ne parles que de tes produits, de ta société, de tes résultats commerciaux — les gens se désabonnent. Parce que ton profil ressemble à une publicité permanente.<br><br>La règle que j'applique et que tu dois appliquer :<ul><li><strong>60% de contenu sur toi</strong> — ta vie, ta personnalité, tes passions, tes valeurs, tes humeurs</li><li><strong>30% de contenu de valeur</strong> — conseils beauté, astuces, tutoriels, informations utiles</li><li><strong>10% de contenu commercial</strong> — tes produits, tes résultats, tes témoignages</li></ul>Quand les gens te connaissent, qu'ils t'apprécient, qu'ils te font confiance — là ils achètent. Et là ils rejoignent ton équipe. Mais d'abord, ils doivent te connaître.<br><br><strong>Partage qui tu es. Le reste suivra.</strong>"<br><br>Facebook ne classe pas les publications par ordre chronologique. Il attribue une <strong>note à chaque publication</strong> et décide qui la voit selon plusieurs critères :<br><br><strong>Ce que l'algorithme Facebook favorise :</strong><ul><li><strong>Les vidéos natives</strong> — uploadées directement sur Facebook, pas des liens YouTube</li><li><strong>Les Lives</strong> — les vidéos en direct ont une portée 6x supérieure aux vidéos classiques</li><li><strong>Les Reels</strong> — depuis 2024, Facebook pousse massivement les Reels comme Instagram</li><li><strong>Les commentaires et partages</strong> — ils comptent bien plus que les simples likes</li><li><strong>Le temps de visionnage</strong> — plus les gens regardent ta vidéo jusqu'au bout, plus Facebook la distribue</li><li><strong>La régularité</strong> — un compte qui publie tous les jours est privilégié par rapport à un compte irrégulier</li><li><strong>Les interactions rapides</strong> — les premières minutes après publication sont cruciales. Si les gens interagissent vite, Facebook booste la portée</li></ul><strong>Ce que l'algorithme Facebook pénalise :</strong><ul><li>Les <strong>liens externes</strong> dans le texte de la publication (redirige vers un autre site). Astuce : mets le lien en commentaire</li><li>Les publications qui demandent explicitement des likes (\"likez si vous êtes d'accord !\")</li><li>Publier trop souvent dans la même journée — ça cannibale ta propre portée</li><li>Les publications ignorées ou masquées par les utilisateurs</li></ul>",
+          "<strong>Comment fonctionne l'algorithme Instagram — ce que tu dois savoir</strong><br><br>Instagram utilise des algorithmes différents selon le format. Comprendre ça change tout à ta stratégie.<br><br><strong>Pour le fil d'actualité :</strong><ul><li>L'algorithme montre d'abord ton contenu à <strong>10-20% de tes abonnés</strong></li><li>Si ces premiers voient, likent, commentent ou sauvegardent → il l'envoie à plus de monde</li><li>Si personne n'interagit dans les premières minutes → la publication meurt silencieusement</li><li>Les <strong>sauvegardes</strong> (quand quelqu'un enregistre ton post) sont le signal le plus fort</li></ul><strong>Pour les Reels — la machine à visibilité :</strong><ul><li>Les Reels génèrent <strong>30 à 60% de portée organique en plus</strong> que les autres formats</li><li>L'algorithme teste ton Reel auprès d'audiences inconnues — pas seulement tes abonnés</li><li>Le critère numéro 1 : le <strong>taux de complétion</strong> (combien de personnes regardent jusqu'au bout)</li><li>Un Reel de 7 à 15 secondes qui se regarde entièrement bat une vidéo de 3 minutes à moitié regardée</li><li>La première seconde est déterminante — si tu n'accroches pas immédiatement, les gens scrollent</li></ul><strong>Pour les Stories :</strong><ul><li>La portée des stories est limitée à <strong>environ 3-5% de tes abonnés</strong> — c'est peu</li><li>Mais elles créent un lien quotidien avec ta communauté proche</li><li>Les sondages, questions et stickers interactifs augmentent leur portée</li></ul>",
+          "<strong>Le Shadow Ban — et les mots qui freinent ton algorithme</strong><br><br>Le <strong>shadow ban</strong> c'est quand Facebook ou Instagram réduit invisiblement ta portée sans te prévenir. Tes publications apparaissent toujours sur ton profil, mais personne ne les voit. Tu continues à publier dans le vide sans le savoir.<br><br><strong>Ce qui peut déclencher un shadow ban :</strong><ul><li>Utiliser des <strong>hashtags interdits ou signalés</strong> sur Instagram</li><li>Publier du contenu qui viole les règles communautaires</li><li>Utiliser des applications tierces non approuvées pour automatiser des likes ou followers</li><li>Avoir reçu trop de signalements sur tes publications</li><li>Publier trop vite, trop souvent (comportement de spam)</li></ul><strong>Les mots et expressions qui freinent ta portée :</strong><br>Facebook et Instagram analysent le contenu de tes publications. Certains termes déclenchent des filtres automatiques :<ul><li><strong>\"Rejoins mon équipe\"</strong>, <strong>\"Opportunité\"</strong>, <strong>\"Revenu passif\"</strong> — associés aux spams MLM</li><li><strong>\"Travail depuis chez toi\"</strong>, <strong>\"Liberté financière\"</strong> — filtrés comme publicité non autorisée</li><li><strong>\"Contacte-moi en MP\"</strong> trop répété — signal de prospection agressive</li><li><strong>Mettre un lien dans le texte</strong> de ta publication — Facebook le pénalise directement</li><li><strong>\"Liker et partager pour gagner\"</strong> — interdit par les règles Facebook</li></ul><strong>Comment contourner sans tricher :</strong><ul><li>Parle de <strong>ton quotidien</strong> plutôt que de ton activité directement</li><li>Mets les liens en <strong>commentaire</strong>, pas dans le texte du post</li><li>Utilise des <strong>mots naturels</strong> — \"j'ai commencé quelque chose qui change ma vie\" plutôt que \"opportunité de revenus\"</li><li>Vérifie tes hashtags Instagram avant de les utiliser — recherche-les et vérifie qu'ils ne sont pas bloqués</li></ul>",
+        ],
+        pointsCles: [
+          { icon: "👤", text: "Les gens suivent des personnes, pas des vendeurs. Montre qui tu es avant de vendre." },
+          { icon: "📸", text: "Prénom + Nom en pseudo, photo de profil souriante et claire, bio qui explique ce que tu fais." },
+          { icon: "👁️", text: "Les vues comptent plus que les likes. Beaucoup de gens t'observent en silence avant d'agir." },
+          { icon: "📅", text: "Régularité > quantité. 1 post par jour vaut mieux que 10 en rafale puis le silence." },
+          { icon: "🎯", text: "Règle 60/30/10 : 60% sur toi, 30% de valeur, 10% commercial maximum." }
+        ],
+        video: null,
+        outils: ['generateur-posts', 'coach-ia'],
+        quiz: [
+          { q: "Quelle est la règle de répartition des contenus recommandée sur les réseaux ?", options: ["50% produits, 50% vie personnelle", "80% commercial, 20% personnel", "60% sur soi, 30% de valeur, 10% commercial", "100% de contenu sur les produits pour vendre plus"], bonne: 2 },
+          { q: "Ce qui compte vraiment sur les réseaux sociaux en MLM, c'est :", options: ["Le nombre de likes sur chaque publication", "Le nombre de commentaires", "Le nombre de vues — beaucoup regardent en silence avant d'agir", "Le nombre d'abonnés"], bonne: 2 },
+          { q: "Quelle doit être ta photo de profil sur les réseaux ?", options: ["Le logo de ta société MLM", "Une photo de tes enfants ou animaux", "Une photo de toi, souriante et en pleine lumière", "Un avatar ou personnage cartoon"], bonne: 2 },
+          { q: "Comment doit être ton pseudo sur les réseaux pour ton activité MLM ?", options: ["Un nom fantaisie qui te représente", "Ton prénom et ton nom réels pour être facilement retrouvé", "Le nom de ta société MLM", "Un pseudo mystérieux pour intriguer"], bonne: 1 },
+          { q: "Quelle est l'erreur numéro 1 en MLM sur les réseaux sociaux ?", options: ["Publier trop rarement", "Ne pas utiliser les stories", "Parler de sa société tous les jours sans partager sa personnalité", "Avoir trop d'abonnés"], bonne: 2 }
+        ]
+      },
+      {
+        id: 'dec-4',
+        titre: "Les différents cercles de clientèle",
+        intro: "Tes premières clientes sont déjà autour de toi. Tu ne le sais pas encore, mais tu as accès à des centaines de personnes potentiellement intéressées par tes produits.",
+        contenu: [
+          "<strong>Cercle 1 — Les proches (0 à 50 personnes) :</strong> Ta famille, tes amis, tes collègues. Ce sont les plus faciles à approcher mais attention — ne mets pas de pression. Propose-leur simplement de découvrir les produits, sans forcer.",
+          "<strong>Cercle 2 — Les connaissances (50 à 500 personnes) :</strong> Les parents d'élèves, les gens du sport, les voisins, les anciens collègues. Ce cercle est souvent sous-estimé. Une simple conversation peut mener à une vente.",
+          "<strong>Cercle 3 — Les inconnus (Infini) :</strong> Tes abonnés sur les réseaux sociaux, les personnes qui commentent tes publications, celles qui viennent vers toi grâce à ton contenu. C'est là que se trouve ton vrai potentiel de croissance.",
+          "<strong>La stratégie des 3 cercles :</strong><ul><li>Commence par le cercle 1 pour te faire la main</li><li>Développe le cercle 2 grâce aux recommandations</li><li>Attire le cercle 3 grâce aux réseaux sociaux</li></ul>",
+          "<strong>L'erreur classique :</strong> Rester coincé dans le cercle 1. Les personnes qui réussissent en MLM apprennent vite à attirer des inconnus grâce à leur présence en ligne."
+        ],
+        pointsCles: [
+          { icon: "👥", text: "Tu as déjà accès à des centaines de clientes potentielles" },
+          { icon: "🌐", text: "Le cercle 3 est infini grâce aux réseaux sociaux" },
+          { icon: "🚫", text: "Ne reste pas coincé dans le cercle 1" }
+        ],
+        video: null,
+        outils: ['coach-ia', 'checklist'],
+        quiz: [
+          { q: "Combien de cercles de clientèle existe-t-il ?", options: ["1", "2", "3", "4"], bonne: 2 },
+          { q: "Quel cercle offre le plus grand potentiel de croissance ?", options: ["Cercle 1 — les proches", "Cercle 2 — les connaissances", "Cercle 3 — les inconnus", "Tous les cercles également"], bonne: 2 },
+          { q: "Quelle est l'erreur classique en MLM concernant les cercles ?", options: ["Contacter trop de monde", "Rester coincé dans le cercle 1", "Négliger les proches", "Trop prospecter en ligne"], bonne: 1 }
+        ]
+      }
+    ]
+  },
+  'fondations': { nom: 'MLM Fondations', modules: [] },
+  'elite': { nom: 'MLM Elite', modules: [] },
+  'empire': { nom: 'MLM Empire', modules: [] },
+  'boutique': { nom: 'Boutique clé en main', modules: [] }
+};
+
+var OUTILS = {
+  'coach-ia': { icon: '🐦‍🔥', nom: 'Coach IA Phénix', desc: 'Ton coach disponible 24h/24', lien: 'https://academie-beauty-addict.com' },
+  'checklist': { icon: '✅', nom: 'Checklist quotidienne', desc: 'Tes actions du jour', lien: 'https://academie-beauty-addict.com' },
+  'generateur-posts': { icon: '✍️', nom: 'Générateur de posts', desc: 'Crée tes publications', lien: 'https://academie-beauty-addict.com' },
+  'suivi-objectifs': { icon: '🎯', nom: 'Suivi objectifs', desc: 'Suis ta progression', lien: 'https://academie-beauty-addict.com' },
+  'quiz': { icon: '🧠', nom: 'Quiz de formation', desc: 'Teste tes connaissances', lien: 'https://academie-beauty-addict.com' },
+  'carte-visite': { icon: '💳', nom: 'Carte de visite', desc: 'Ta carte virtuelle', lien: 'https://academie-beauty-addict.com' }
+};
+
+// =====================
+// ÉTAT
+// =====================
+var currentUser = null;
+var currentPack = null;
+var moduleActuel = 0;
+var progression = {};
+
+// =====================
+// LOGIN
+// =====================
+function seConnecter() {
+  var id = document.getElementById('login-id').value.trim();
+  var pwd = document.getElementById('login-pwd').value.trim();
+  var errEl = document.getElementById('login-error');
+
+  if (!id || !pwd) { errEl.textContent = 'Remplissez tous les champs.'; errEl.style.display = 'block'; return; }
+
+  errEl.style.display = 'none';
+
+  db.collection('acheteurs_formations').where('identifiant', '==', id).where('motDePasse', '==', pwd).limit(1).get().then(function(snap) {
+    if (snap.empty) {
+      errEl.textContent = 'Identifiant ou mot de passe incorrect.';
+      errEl.style.display = 'block';
+      return;
+    }
+    var data = snap.docs[0].data();
+    currentUser = { id: snap.docs[0].id, ...data };
+    currentPack = data.pack || 'decouverte';
+    progression = data.progression || {};
+    chargerDashboard();
+  }).catch(function(e) {
+    errEl.textContent = 'Erreur de connexion. Réessayez.';
+    errEl.style.display = 'block';
+  });
+}
+
+document.getElementById('login-pwd').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') seConnecter();
+});
+
+function deconnecter() {
+  currentUser = null; currentPack = null; progression = {};
+  document.getElementById('dashboard-page').style.display = 'none';
+  document.getElementById('topbar').style.display = 'none';
+  document.getElementById('login-page').style.display = 'flex';
+}
+
+// =====================
+// DASHBOARD
+// =====================
+function chargerDashboard() {
+  document.getElementById('login-page').style.display = 'none';
+  document.getElementById('dashboard-page').style.display = 'block';
+  document.getElementById('topbar').style.display = 'flex';
+  document.getElementById('user-display').textContent = '👤 ' + (currentUser.prenom || currentUser.identifiant);
+
+  var formation = FORMATIONS[currentPack];
+  if (!formation) return;
+
+  var modules = formation.modules;
+  var done = modules.filter(function(m) { return progression[m.id] === 'done'; }).length;
+  var pct = modules.length > 0 ? Math.round(done / modules.length * 100) : 0;
+
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = pct + '% complété (' + done + '/' + modules.length + ' modules)';
+
+  var list = document.getElementById('modules-list');
+  list.innerHTML = '';
+  modules.forEach(function(m, i) {
+    var isDone = progression[m.id] === 'done';
+    var isLocked = i > 0 && progression[modules[i-1].id] !== 'done';
+    var div = document.createElement('div');
+    div.className = 'module-item' + (isLocked ? ' locked' : '') + (i === moduleActuel ? ' active' : '');
+    div.innerHTML = '<div class="module-num ' + (isDone ? 'done' : (isLocked ? 'locked' : 'current')) + '">' + (isDone ? '✓' : (i+1)) + '</div><div class="module-label">' + m.titre + '</div>';
+    if (!isLocked) {
+      div.onclick = (function(idx) { return function() { afficherModule(idx); }; })(i);
+    }
+    list.appendChild(div);
+  });
+
+  if (modules.length > 0) afficherModule(0);
+}
+
+// =====================
+// MODULE
+// =====================
+function afficherModule(idx) {
+  moduleActuel = idx;
+  var formation = FORMATIONS[currentPack];
+  var m = formation.modules[idx];
+  if (!m) return;
+
+  // Mettre à jour sidebar
+  document.querySelectorAll('.module-item').forEach(function(el, i) {
+    el.classList.toggle('active', i === idx);
+  });
+
+  var content = document.getElementById('main-content');
+  content.innerHTML = '';
+
+  // Header
+  var header = document.createElement('div');
+  header.className = 'module-header';
+  header.innerHTML = '<div class="module-badge">MODULE ' + (idx+1) + ' / ' + formation.modules.length + '</div><h1 class="module-title">' + m.titre + '</h1><p class="module-desc">' + m.intro + '</p>';
+  content.appendChild(header);
+
+  // Contenu texte
+  var textBlock = document.createElement('div');
+  textBlock.className = 'section-block';
+  textBlock.innerHTML = '<div class="section-icon">📝</div><div class="section-title">Contenu de la formation</div><div class="section-text">' + m.contenu.map(function(p) { return '<p>' + p + '</p>'; }).join('') + '</div>';
+  content.appendChild(textBlock);
+
+  // Points clés
+  if (m.pointsCles && m.pointsCles.length > 0) {
+    var keysBlock = document.createElement('div');
+    keysBlock.className = 'section-block';
+    keysBlock.innerHTML = '<div class="section-icon">🎯</div><div class="section-title">Points clés à retenir</div><div class="key-points">' + m.pointsCles.map(function(k) { return '<div class="key-point"><span class="key-point-icon">' + k.icon + '</span><span class="key-point-text">' + k.text + '</span></div>'; }).join('') + '</div>';
+    content.appendChild(keysBlock);
+  }
+
+  // Vidéo
+  var videoBlock = document.createElement('div');
+  videoBlock.className = 'section-block';
+  if (m.video) {
+    videoBlock.innerHTML = '<div class="section-icon">🎬</div><div class="section-title">Vidéo du module</div><div class="video-container"><iframe src="https://www.youtube.com/embed/' + m.video + '" frameborder="0" allowfullscreen></iframe></div>';
+  } else {
+    videoBlock.innerHTML = '<div class="section-icon">🎬</div><div class="section-title">Vidéo du module</div><div class="video-container"><div class="video-placeholder"><p style="font-size:32px;margin-bottom:12px;">🎬</p><p>Vidéo en cours de production<br><span style="font-size:11px;opacity:0.6;">Disponible prochainement</span></p></div></div>';
+  }
+  content.appendChild(videoBlock);
+
+  // Outils
+  if (m.outils && m.outils.length > 0) {
+    var outilsBlock = document.createElement('div');
+    outilsBlock.className = 'section-block';
+    outilsBlock.innerHTML = '<div class="section-icon">🔧</div><div class="section-title">Outils liés à ce module</div><div class="tools-grid">' + m.outils.map(function(o) { var outil = OUTILS[o]; if (!outil) return ''; return '<a class="tool-card" href="' + outil.lien + '" target="_blank"><div class="tool-icon">' + outil.icon + '</div><div class="tool-name">' + outil.nom + '</div><div class="tool-desc">' + outil.desc + '</div></a>'; }).join('') + '</div>';
+    content.appendChild(outilsBlock);
+  }
+
+  // Quiz
+  afficherQuiz(m, idx, content);
+}
+
+function afficherQuiz(m, idx, content) {
+  var quizBlock = document.createElement('div');
+  quizBlock.className = 'section-block';
+  quizBlock.id = 'quiz-block';
+
+  var isDone = progression[m.id] === 'done';
+  var quizHTML = '<div class="section-icon">✅</div><div class="section-title">Quiz de validation</div>';
+
+  if (isDone) {
+    quizHTML += '<div class="quiz-result success" style="display:block;"><div class="quiz-result-title">✅ Module validé !</div><div class="quiz-result-text">Vous avez déjà validé ce module avec succès.</div></div>';
+    if (idx < FORMATIONS[currentPack].modules.length - 1) {
+      quizHTML += '<button class="btn-quiz" onclick="afficherModule(' + (idx+1) + ')" style="margin-top:16px;">Module suivant →</button>';
+    } else {
+      quizHTML += '<button class="btn-quiz" onclick="afficherCertificat()" style="margin-top:16px;background:linear-gradient(135deg,#f5d48a,#c9a86a);">🏆 Voir mon certificat</button>';
+    }
+  } else {
+    m.quiz.forEach(function(q, qi) {
+      quizHTML += '<div class="quiz-question" id="q-' + qi + '"><div class="quiz-q">' + (qi+1) + '. ' + q.q + '</div><div class="quiz-options">' + q.options.map(function(opt, oi) { return '<div class="quiz-option" onclick="selectionner(' + qi + ',' + oi + ')" id="opt-' + qi + '-' + oi + '"><div class="quiz-radio"></div><span class="quiz-option-text">' + opt + '</span></div>'; }).join('') + '</div></div>';
+    });
+    quizHTML += '<button class="btn-quiz" onclick="validerQuiz(' + idx + ')">Valider mes réponses</button>';
+    quizHTML += '<div class="quiz-result" id="quiz-result"><div class="quiz-result-title" id="quiz-result-title"></div><div class="quiz-result-text" id="quiz-result-text"></div></div>';
+  }
+
+  quizBlock.innerHTML = quizHTML;
+  content.appendChild(quizBlock);
+}
+
+var reponsesSelectionnees = {};
+
+function selectionner(qi, oi) {
+  reponsesSelectionnees[qi] = oi;
+  document.querySelectorAll('[id^="opt-' + qi + '-"]').forEach(function(el) { el.classList.remove('selected'); });
+  document.getElementById('opt-' + qi + '-' + oi).classList.add('selected');
+}
+
+function validerQuiz(idx) {
+  var m = FORMATIONS[currentPack].modules[idx];
+  var total = m.quiz.length;
+  var bonnes = 0;
+
+  m.quiz.forEach(function(q, qi) {
+    var selected = reponsesSelectionnees[qi];
+    if (selected === undefined) return;
+    var optEl = document.getElementById('opt-' + qi + '-' + selected);
+    if (selected === q.bonne) { bonnes++; if (optEl) optEl.classList.add('correct'); }
+    else {
+      if (optEl) optEl.classList.add('wrong');
+      var bonneEl = document.getElementById('opt-' + qi + '-' + q.bonne);
+      if (bonneEl) bonneEl.classList.add('correct');
+    }
+  });
+
+  var pct = Math.round(bonnes / total * 100);
+  var resultEl = document.getElementById('quiz-result');
+  var titleEl = document.getElementById('quiz-result-title');
+  var textEl = document.getElementById('quiz-result-text');
+
+  if (pct >= 70) {
+    resultEl.className = 'quiz-result success';
+    titleEl.textContent = '🎉 Félicitations ! ' + pct + '% de bonnes réponses';
+    textEl.textContent = 'Module validé ! Le module suivant est maintenant débloqué.';
+    progression[m.id] = 'done';
+    sauvegarderProgression();
+    setTimeout(function() {
+      chargerDashboard();
+      afficherModule(idx);
+    }, 2000);
+  } else {
+    resultEl.className = 'quiz-result fail';
+    titleEl.textContent = '❌ ' + pct + '% — Pas encore !';
+    textEl.textContent = 'Il faut 70% minimum pour valider. Relisez le module et réessayez.';
+  }
+  resultEl.style.display = 'block';
+}
+
+function sauvegarderProgression() {
+  if (!currentUser) return;
+  db.collection('acheteurs_formations').doc(currentUser.id).update({ progression: progression });
+}
+
+function afficherOutils() {
+  var content = document.getElementById('main-content');
+  var formation = FORMATIONS[currentPack];
+  var allOutils = {};
+  formation.modules.forEach(function(m) {
+    (m.outils || []).forEach(function(o) { allOutils[o] = OUTILS[o]; });
+  });
+
+  content.innerHTML = '<div class="module-header"><h1 class="module-title" style="font-size:24px;">🔧 Mes outils</h1><p class="module-desc">Tous les outils inclus dans votre formation.</p></div><div class="section-block"><div class="tools-grid">' + Object.keys(allOutils).map(function(o) { var outil = allOutils[o]; if (!outil) return ''; return '<a class="tool-card" href="' + outil.lien + '" target="_blank"><div class="tool-icon">' + outil.icon + '</div><div class="tool-name">' + outil.nom + '</div><div class="tool-desc">' + outil.desc + '</div></a>'; }).join('') + '</div></div>';
+}
+
+function afficherCertificat() {
+  var formation = FORMATIONS[currentPack];
+  var allDone = formation.modules.every(function(m) { return progression[m.id] === 'done'; });
+  var content = document.getElementById('main-content');
+
+  if (!allDone) {
+    content.innerHTML = '<div style="text-align:center;padding:60px 20px;"><p style="font-size:40px;margin-bottom:16px;">🔒</p><p style="color:#f5d48a;font-size:18px;margin-bottom:8px;">Certificat verrouillé</p><p style="color:rgba(245,240,232,0.5);font-size:14px;">Validez tous les modules pour obtenir votre certificat.</p></div>';
+    return;
+  }
+
+  var date = new Date().toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' });
+  content.innerHTML = '<div class="certificat-page"><div class="certificat-card"><div style="height:4px;background:linear-gradient(90deg,#b8860b,#f5d48a,#c9a86a);border-radius:4px;margin-bottom:30px;"></div><p style="color:#c9a86a;font-size:12px;letter-spacing:3px;margin-bottom:16px;">ACADÉMIE BEAUTY ADDICT</p><p style="font-size:48px;margin-bottom:16px;">🏆</p><h2 style="font-family:Georgia,serif;color:#f5d48a;font-size:22px;font-weight:normal;margin-bottom:8px;">Certificat de Formation</h2><p style="color:rgba(245,240,232,0.6);font-size:14px;margin-bottom:24px;">délivré à</p><h3 style="font-family:Georgia,serif;color:#f5d48a;font-size:28px;font-weight:normal;margin-bottom:8px;">' + (currentUser.prenom || currentUser.identifiant) + '</h3><p style="color:rgba(245,240,232,0.6);font-size:14px;margin-bottom:24px;">pour avoir complété avec succès</p><div style="background:rgba(201,168,106,0.15);border:1px solid rgba(201,168,106,0.3);border-radius:12px;padding:14px 24px;margin-bottom:24px;"><p style="color:#f5d48a;font-size:18px;font-weight:bold;">' + formation.nom + '</p></div><p style="color:rgba(245,240,232,0.5);font-size:13px;margin-bottom:24px;">Le ' + date + '</p><div style="height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,106,0.4),transparent);margin-bottom:20px;"></div><p style="color:#c9a86a;font-size:12px;">Benjamin Courtès — Fondateur Académie Beauty Addict</p><div style="height:4px;background:linear-gradient(90deg,#b8860b,#f5d48a,#c9a86a);border-radius:4px;margin-top:24px;"></div></div></div>';
+}
+</script>
+</body>
+</html>
