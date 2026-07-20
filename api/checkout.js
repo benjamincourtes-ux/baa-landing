@@ -3,28 +3,23 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const PACKS = {
   'decouverte': {
     priceId: 'price_1Tv0cD2MXwGWfMm8NQwx5ZdZ',
-    nom: 'MLM Découverte',
-    paiementMax: 2
+    nom: 'MLM Découverte'
   },
   'fondations': {
     priceId: 'price_1TuxPh2MXwGWfMm8UTh6VmzD',
-    nom: 'MLM Fondations',
-    paiementMax: 4
+    nom: 'MLM Fondations'
   },
   'elite': {
     priceId: 'price_1TuxRh2MXwGWfMm8bgM8CW2X',
-    nom: 'MLM Elite',
-    paiementMax: 4
+    nom: 'MLM Elite'
   },
   'empire': {
     priceId: 'price_1Tv0eV2MXwGWfMm8mvcmHKCz',
-    nom: 'MLM Empire',
-    paiementMax: 4
+    nom: 'MLM Empire'
   },
   'boutique': {
     priceId: 'price_1Tv0gN2MXwGWfMm8kthrfG28',
-    nom: 'Boutique clé en main',
-    paiementMax: 4
+    nom: 'Boutique clé en main'
   }
 };
 
@@ -43,12 +38,12 @@ module.exports = async (req, res) => {
     }
 
     const packData = PACKS[pack];
-    const successUrl = `https://baa-landing.vercel.app/merci?pack=${pack}${ref ? '&ref=' + ref : ''}`;
-    const cancelUrl = `https://baa-landing.vercel.app/formations`;
+    const successUrl = `https://landing.academie-beauty-addict.com/merci?pack=${pack}${ref ? '&ref=' + ref : ''}`;
+    const cancelUrl = `https://landing.academie-beauty-addict.com/formations`;
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
-      payment_method_types: ['card', 'klarna'],
+      // Pas de payment_method_types = méthodes dynamiques automatiques (Klarna, PayPal, carte...)
       line_items: [{
         price: packData.priceId,
         quantity: 1,
@@ -59,12 +54,6 @@ module.exports = async (req, res) => {
         pack: pack,
         ref: ref || '',
         nomPack: packData.nom
-      },
-      payment_intent_data: {
-        metadata: {
-          pack: pack,
-          ref: ref || ''
-        }
       }
     });
 
