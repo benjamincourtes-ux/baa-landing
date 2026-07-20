@@ -48,7 +48,7 @@ module.exports = async (req, res) => {
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
-      payment_method_types: ['card', 'klarna', 'billie'],
+      payment_method_types: ['card', 'klarna'],
       line_items: [{
         price: packData.priceId,
         quantity: 1,
