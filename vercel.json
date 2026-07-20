@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/formations", "destination": "/formations.html" },
     { "source": "/merci", "destination": "/merci.html" },
+    { "source": "/espace-formations", "destination": "/espace-formations.html" },
     { "source": "/api/checkout", "destination": "/api/checkout.js" },
     { "source": "/api/webhook", "destination": "/api/webhook.js" }
   ]
