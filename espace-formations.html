@@ -137,9 +137,7 @@ body::before {
 .topbar-progress-wrap { height:3px; background:rgba(255,255,255,0.08); }
 .topbar-progress-fill { height:3px; background:linear-gradient(90deg,var(--gold-1),var(--gold-highlight)); transition:width 0.5s; }
 
-/* ========================================================== */
-/* MODIFICATION UNIOUE : EFFET WAOW BADGE VIP / EMPIRE        */
-/* ========================================================== */
+/* EFFET WAOW BADGE VIP / EMPIRE */
 .pack-badge-topbar {
   position: relative;
   overflow: hidden;
@@ -184,7 +182,6 @@ body::before {
   0%, 100% { box-shadow: 0 0 10px rgba(201,162,92,0.2); border-color: rgba(201,162,92,0.4); }
   50% { box-shadow: 0 0 20px rgba(232,200,116,0.45); border-color: var(--gold-highlight); }
 }
-/* ========================================================== */
 
 .btn-topbar-icon { background:none; border:none; color:rgba(245,240,232,0.7); font-size:16px; cursor:pointer; padding:6px; border-radius:8px; transition:background .2s; }
 .btn-topbar-icon:hover { background:rgba(201,162,92,0.1); }
@@ -683,6 +680,95 @@ firebase.initializeApp({
   appId:"1:311669980538:web:eaf8a95e987473c6412ac3"
 });
 var db = firebase.firestore();
+
+// Logique de connexion et gestion des utilisateurs
+function seConnecter() {
+  var idInput = document.getElementById('login-id').value.trim();
+  var pwdInput = document.getElementById('login-pwd').value.trim();
+  var errEl = document.getElementById('login-error');
+
+  if (!idInput || !pwdInput) {
+    errEl.style.display = 'block';
+    errEl.textContent = 'Veuillez remplir tous les champs.';
+    return;
+  }
+
+  db.collection("utilisateurs").where("identifiant", "==", idInput).where("password", "==", pwdInput).get()
+  .then(function(querySnapshot) {
+    if (!querySnapshot.empty) {
+      var userDoc = querySnapshot.docs[0];
+      var userData = userDoc.data();
+      localStorage.setItem("beauty_user", JSON.stringify(userData));
+      lancerDashboard(userData);
+    } else {
+      errEl.style.display = 'block';
+      errEl.textContent = 'Identifiant ou mot de passe incorrect.';
+    }
+  })
+  .catch(function(error) {
+    console.error("Erreur de connexion : ", error);
+    errEl.style.display = 'block';
+    errEl.textContent = 'Erreur technique de connexion.';
+  });
+}
+
+function lancerDashboard(user) {
+  document.getElementById('login-page').style.display = 'none';
+  document.getElementById('topbar').style.display = 'flex';
+  document.getElementById('dashboard-page').style.display = 'block';
+  document.getElementById('user-display').textContent = user.prenom || user.identifiant;
+  if(user.badge) {
+    document.getElementById('pack-badge-topbar').textContent = user.badge;
+  }
+  chargerModules();
+}
+
+function deconnecter() {
+  localStorage.removeItem("beauty_user");
+  location.reload();
+}
+
+function chargerModules() {
+  // Rendu de base de la liste des modules dans la sidebar
+  var listEl = document.getElementById('modules-list');
+  if(listEl) {
+    listEl.innerHTML = '<div class="module-item active"><div class="module-num current">1</div><div class="module-label">Module 1 : Bienvenue dans l\'Académie</div></div>';
+  }
+}
+
+function toggleSidebarMobile() {
+  document.getElementById('sidebar').classList.toggle('mobile-open');
+  document.getElementById('sidebar-overlay').classList.toggle('active');
+}
+
+function toggleSidebarDroiteMobile() {
+  var sd = document.getElementById('sidebar-droite');
+  var ov = document.getElementById('sidebar-droite-overlay');
+  sd.classList.toggle('mobile-open');
+  sd.classList.toggle('sheet-visible');
+  ov.classList.toggle('active');
+}
+
+function toggleRechercheModules() {
+  document.getElementById('recherche-dropdown').classList.toggle('active');
+}
+
+function toggleNotifications() {
+  document.getElementById('notif-dropdown').classList.toggle('active');
+}
+
+// Vérification de session active au chargement
+window.onload = function() {
+  var savedUser = localStorage.getItem("beauty_user");
+  if(savedUser) {
+    try {
+      var user = JSON.parse(savedUser);
+      lancerDashboard(user);
+    } catch(e) {
+      localStorage.removeItem("beauty_user");
+    }
+  }
+};
 </script>
 </body>
 </html>
