@@ -526,7 +526,6 @@ body::before {
     </div>
     <div class="topbar-center" id="topbar-center"></div>
     <div class="topbar-user">
-      <button class="btn-hamburger-droite" id="btn-hamburger-droite" onclick="toggleSidebarDroiteMobile()">📋</button>
       <div style="position:relative;">
         <button class="btn-topbar-icon" onclick="toggleRechercheModules()">🔍</button>
         <div class="recherche-dropdown" id="recherche-dropdown">
@@ -548,6 +547,8 @@ body::before {
   </div>
   <div class="topbar-progress-wrap"><div class="topbar-progress-fill" id="topbar-progress-fill" style="width:0%"></div></div>
 </div>
+
+<button class="btn-hamburger-droite" id="btn-hamburger-droite" onclick="toggleSidebarDroiteMobile()">📋</button>
 
 <!-- PAGE LOGIN -->
 <div id="login-page">
@@ -3472,6 +3473,8 @@ function construireCarteContenu(htmlBloc, index, moduleId, moduleTitre) {
 }
 
 function afficherModule(idx) {
+  var mainContentScroll = document.getElementById('main-content');
+  if (mainContentScroll) mainContentScroll.scrollTop = 0;
   window.scrollTo({ top: 0, behavior: 'smooth' });
   moduleActuel = idx;
   var formation = FORMATIONS[currentPack];
@@ -3590,6 +3593,8 @@ function demarrerLectureMobile() {
   hero.classList.add('hero-hidden');
   setTimeout(function() {
     hero.remove();
+    var mainContentScroll = document.getElementById('main-content');
+    if (mainContentScroll) mainContentScroll.scrollTop = 0;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, 350);
 }
