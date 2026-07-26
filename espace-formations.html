@@ -180,6 +180,7 @@ body::before {
   overflow-y:auto; overscroll-behavior:contain; padding:20px 16px; z-index:40; background:var(--cream);
   border-left:1px solid var(--card-border);
 }
+.btn-fermer-sheet { display:none; }
 .sidebar-droite.sd-active { display:block; }
 .btn-hamburger-droite {
   display:none; background:none; border:1px solid rgba(201,162,92,0.3);
@@ -189,7 +190,14 @@ body::before {
 @media(max-width:1100px){
   .sidebar-droite.sd-active { display:none; z-index:200; box-shadow:-4px 0 24px rgba(0,0,0,0.4); }
   .sidebar-droite.sd-active.mobile-open { display:block; }
-  .btn-hamburger-droite.visible { display:inline-block; }
+  .btn-hamburger-droite.visible {
+    display:flex; align-items:center; justify-content:center;
+    position:fixed; right:18px; bottom:20px; z-index:250;
+    width:44px; height:44px; border-radius:50%;
+    background:linear-gradient(135deg,var(--gold-1),var(--gold-highlight));
+    color:#1a0a00; border:none; font-size:17px;
+    box-shadow:0 6px 18px rgba(180,140,70,0.45);
+  }
   .main-content { right:0; }
 }
 .sd-card { background:#FFFFFF; border:1px solid var(--card-border); border-radius:14px; padding:16px; margin-bottom:16px; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
@@ -430,14 +438,6 @@ body::before {
   .main-content { left:0; padding:20px; }
 
   /* PHASE 1 MOBILE PREMIUM — Bottom Sheet remplaçant le panneau lateral droit */
-  .btn-hamburger-droite.visible {
-    display:flex; align-items:center; justify-content:center;
-    position:fixed; right:20px; bottom:24px; z-index:250;
-    width:56px; height:56px; border-radius:50%;
-    background:linear-gradient(135deg,var(--gold-1),var(--gold-highlight));
-    color:#1a0a00; border:none; font-size:22px;
-    box-shadow:0 8px 24px rgba(180,140,70,0.45);
-  }
   .sidebar-droite.sd-active.mobile-open {
     top:auto !important; bottom:0; left:0; right:0; width:100%;
     max-height:78vh; border-radius:22px 22px 0 0;
@@ -450,6 +450,54 @@ body::before {
     content:''; display:block; width:40px; height:4px; border-radius:4px;
     background:rgba(0,0,0,0.15); margin:10px auto 6px;
   }
+  .btn-fermer-sheet.visible {
+    display:flex; align-items:center; justify-content:center;
+    position:fixed; z-index:260; bottom:calc(78vh - 6px);
+    right:14px; width:32px; height:32px; border-radius:50%;
+    background:rgba(0,0,0,0.08); border:none; color:var(--text-dark); font-size:14px; cursor:pointer;
+  }
+
+  /* PHASE 2 MOBILE PREMIUM — Ecran Hero avant la lecture */
+  .mobile-hero-screen {
+    position:fixed; inset:70px 0 0 0; background:var(--cream); z-index:150;
+    display:flex; flex-direction:column; justify-content:center; padding:34px 26px;
+    opacity:1; transform:translateY(0); transition:opacity .35s ease, transform .35s ease;
+    overflow-y:auto;
+  }
+  .mobile-hero-screen.hero-hidden { opacity:0; transform:translateY(-18px); pointer-events:none; }
+  .mobile-hero-badge {
+    display:inline-block; align-self:flex-start; background:rgba(201,162,92,0.1);
+    border:1px solid rgba(201,162,92,0.3); color:var(--gold-1); padding:5px 14px;
+    border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.05em; margin-bottom:16px;
+  }
+  .mobile-hero-title { font-family:'Playfair Display',Georgia,serif; font-size:27px; color:var(--text-dark); font-weight:700; line-height:1.25; margin-bottom:14px; }
+  .mobile-hero-intro { color:var(--text-muted); font-size:14.5px; line-height:1.7; margin-bottom:24px; }
+  .mobile-hero-ressources { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:30px; }
+  .mhr-item { background:#FFFFFF; border:1px solid var(--card-border); border-radius:10px; padding:9px 15px; font-size:12.5px; color:var(--text-dark); box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+  .mobile-hero-btn {
+    background:#0D0D0D; color:#FFFFFF; border:none; padding:17px; border-radius:16px;
+    font-weight:700; font-size:15px; cursor:pointer; width:100%;
+    box-shadow:0 8px 22px rgba(0,0,0,0.25); transition:transform .15s ease;
+  }
+  .mobile-hero-btn:active { transform:scale(0.97); }
+
+  /* PHASE 2 MOBILE PREMIUM — Ecran de felicitations apres le quiz */
+  .mobile-succes-screen {
+    position:fixed; inset:70px 0 0 0; background:var(--cream); z-index:280;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:34px 26px; text-align:center; opacity:0; transition:opacity .35s ease;
+  }
+  .mobile-succes-screen.visible { opacity:1; }
+  .mobile-succes-emoji { font-size:64px; margin-bottom:18px; animation:mobileSuccesRebond .6s ease; }
+  @keyframes mobileSuccesRebond { 0%{ transform:scale(0.4); opacity:0; } 60%{ transform:scale(1.1); opacity:1; } 100%{ transform:scale(1); } }
+  .mobile-succes-titre { font-family:'Playfair Display',Georgia,serif; font-size:24px; color:var(--text-dark); font-weight:700; margin-bottom:10px; }
+  .mobile-succes-texte { color:var(--text-muted); font-size:14px; line-height:1.6; margin-bottom:28px; }
+  .mobile-succes-btn {
+    background:linear-gradient(135deg,var(--gold-1),var(--gold-highlight)); color:#1a0a00; border:none;
+    padding:16px 30px; border-radius:16px; font-weight:700; font-size:14.5px; cursor:pointer; width:100%;
+    box-shadow:0 8px 22px rgba(201,162,92,0.3); margin-bottom:10px;
+  }
+  .mobile-succes-btn-secondaire { background:none; border:1px solid var(--card-border); color:var(--text-muted); padding:14px 30px; border-radius:16px; font-size:13.5px; cursor:pointer; width:100%; }
 
   /* Citations et encadres mis en valeur sur mobile */
   .mobile-citation {
@@ -647,6 +695,7 @@ body::before {
 
   <!-- SIDEBAR DROITE -->
   <div class="sidebar-overlay" id="sidebar-droite-overlay" onclick="toggleSidebarDroiteMobile()"></div>
+  <button class="btn-fermer-sheet" onclick="toggleSidebarDroiteMobile()" title="Fermer">✕</button>
   <div class="sidebar-droite" id="sidebar-droite"></div>
 
 </div>
@@ -3510,7 +3559,39 @@ function afficherModule(idx) {
   content.appendChild(bottomNavEl);
   chargerBottomNav(idx, formation);
 
+  // PHASE 2 MOBILE PREMIUM — ecran Hero avant la lecture (mobile uniquement)
+  var ancienHero = document.getElementById('mobile-hero-screen');
+  if (ancienHero) ancienHero.remove();
+  if (window.innerWidth <= 768) {
+    var heroEl = document.createElement('div');
+    heroEl.id = 'mobile-hero-screen';
+    heroEl.className = 'mobile-hero-screen';
+    heroEl.innerHTML =
+      '<div class="mobile-hero-badge">MODULE ' + (idx+1) + ' / ' + formation.modules.length + '</div>' +
+      '<h1 class="mobile-hero-title">' + m.titre + '</h1>' +
+      '<p class="mobile-hero-intro">' + m.intro + '</p>' +
+      '<div class="mobile-hero-ressources">' +
+        '<div class="mhr-item">⏱ ' + dureeEstimee + ' min</div>' +
+        '<div class="mhr-item">' + (m.video ? '🎬 Vidéo' : '📖 Lecture') + '</div>' +
+        (m.outils && m.outils.length > 0 ? '<div class="mhr-item">🔧 Outils</div>' : '') +
+        '<div class="mhr-item">✅ Quiz</div>' +
+      '</div>' +
+      '<button class="mobile-hero-btn" onclick="demarrerLectureMobile()">▶ Commencer la leçon</button>';
+    document.body.appendChild(heroEl);
+    window.scrollTo(0, 0);
+  }
+
   setTimeout(function() { chargerDreamBoard(); }, 100);
+}
+
+function demarrerLectureMobile() {
+  var hero = document.getElementById('mobile-hero-screen');
+  if (!hero) return;
+  hero.classList.add('hero-hidden');
+  setTimeout(function() {
+    hero.remove();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 350);
 }
 
 function toggleFavori(cle, titre, moduleTitre) {
@@ -3587,9 +3668,11 @@ function masquerNavModule() {
   var topbarCenter = document.getElementById('topbar-center');
   if (topbarCenter) topbarCenter.innerHTML = '';
   var sidebarDroite = document.getElementById('sidebar-droite');
-  if (sidebarDroite) sidebarDroite.classList.remove('sd-active', 'mobile-open');
+  if (sidebarDroite) sidebarDroite.classList.remove('sd-active', 'mobile-open', 'sheet-visible');
   var btnDroite = document.getElementById('btn-hamburger-droite');
   if (btnDroite) btnDroite.classList.remove('visible');
+  var btnFermerSheet = document.querySelector('.btn-fermer-sheet');
+  if (btnFermerSheet) btnFermerSheet.classList.remove('visible');
   var overlayDroite = document.getElementById('sidebar-droite-overlay');
   if (overlayDroite) overlayDroite.classList.remove('active');
 }
@@ -3597,17 +3680,22 @@ function masquerNavModule() {
 function toggleSidebarDroiteMobile() {
   var sd = document.getElementById('sidebar-droite');
   var overlay = document.getElementById('sidebar-droite-overlay');
+  var btnFermer = document.querySelector('.btn-fermer-sheet');
   if (!sd) return;
   var estOuvert = sd.classList.contains('mobile-open');
   if (estOuvert) {
     sd.classList.remove('sheet-visible');
     if (overlay) overlay.classList.remove('active');
+    if (btnFermer) btnFermer.classList.remove('visible');
     setTimeout(function() { sd.classList.remove('mobile-open'); }, 300);
   } else {
     sd.classList.add('mobile-open');
     if (overlay) overlay.classList.add('active');
     requestAnimationFrame(function() {
-      requestAnimationFrame(function() { sd.classList.add('sheet-visible'); });
+      requestAnimationFrame(function() {
+        sd.classList.add('sheet-visible');
+        if (btnFermer) btnFermer.classList.add('visible');
+      });
     });
   }
 }
@@ -3803,16 +3891,64 @@ function validerQuiz(idx) {
     textEl.textContent = 'Module validé ! Le module suivant est maintenant débloqué.';
     progression[m.id] = 'done';
     sauvegarderProgression();
-    setTimeout(function() {
-      chargerDashboard();
-      afficherModule(idx);
-    }, 2000);
+
+    if (window.innerWidth <= 768) {
+      afficherEcranSuccesMobile(idx, pct);
+    } else {
+      setTimeout(function() {
+        chargerDashboard();
+        afficherModule(idx);
+      }, 2000);
+    }
   } else {
     resultEl.className = 'quiz-result fail';
     titleEl.textContent = '❌ ' + pct + '% — Pas encore !';
     textEl.textContent = 'Il faut 70% minimum pour valider. Relisez le module et réessayez.';
   }
   resultEl.style.display = 'block';
+}
+
+function afficherEcranSuccesMobile(idx, pct) {
+  var formation = FORMATIONS[currentPack];
+  var aUneSuite = idx < formation.modules.length - 1;
+  var ancienEcran = document.getElementById('mobile-succes-screen');
+  if (ancienEcran) ancienEcran.remove();
+
+  var ecran = document.createElement('div');
+  ecran.id = 'mobile-succes-screen';
+  ecran.className = 'mobile-succes-screen';
+  ecran.innerHTML =
+    '<div class="mobile-succes-emoji">🎉</div>' +
+    '<div class="mobile-succes-titre">Bravo !</div>' +
+    '<p class="mobile-succes-texte">' + pct + '% de bonnes réponses — ce module est validé et le suivant est débloqué.</p>' +
+    (aUneSuite
+      ? '<button class="mobile-succes-btn" onclick="passerLeconSuivanteMobile(' + (idx+1) + ')">Leçon suivante →</button><button class="mobile-succes-btn-secondaire" onclick="fermerEcranSuccesMobile(' + idx + ')">Rester sur cette leçon</button>'
+      : '<button class="mobile-succes-btn" onclick="fermerEcranSuccesMobile(' + idx + ')">🏆 Formation terminée !</button>');
+
+  document.body.appendChild(ecran);
+  requestAnimationFrame(function() {
+    requestAnimationFrame(function() { ecran.classList.add('visible'); });
+  });
+}
+
+function fermerEcranSuccesMobile(idx) {
+  var ecran = document.getElementById('mobile-succes-screen');
+  chargerDashboard();
+  afficherModule(idx);
+  if (ecran) {
+    ecran.classList.remove('visible');
+    setTimeout(function() { ecran.remove(); }, 350);
+  }
+}
+
+function passerLeconSuivanteMobile(idxSuivant) {
+  var ecran = document.getElementById('mobile-succes-screen');
+  chargerDashboard();
+  afficherModule(idxSuivant);
+  if (ecran) {
+    ecran.classList.remove('visible');
+    setTimeout(function() { ecran.remove(); }, 350);
+  }
 }
 
 function sauvegarderProgression() {
