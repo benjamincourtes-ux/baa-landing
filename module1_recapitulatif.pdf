@@ -1,155 +1,1586 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 5 0 R /F5 7 0 R /F6 10 0 R
+/Producer (pypdf)
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Type /Pages
+/Count 4
+/Kids [ 4 0 R 14 0 R 18 0 R 22 0 R ]
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Type /Catalog
+/Pages 2 0 R
 >>
 endobj
 4 0 obj
 <<
-/BaseFont /Times-Bold /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/Contents 5 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F2 8 0 R
+/F2-0 9 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
 >>
 endobj
 5 0 obj
 <<
-/BaseFont /Times-Italic /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
+/Length 1075
 >>
+stream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+0.980392 0.968627 0.94902 rg
+n
+0 0 595.2756 841.8898 re
+f*
+0.788235 0.635294 0.360784 RG
+1.2 w
+n
+28 28 539.2756 785.8898 re
+S
+2.2 w
+n
+60 711.8898 m
+535.2756 711.8898 l
+S
+n
+60 165 m
+535.2756 165 l
+S
+0.788235 0.635294 0.360784 rg
+BT
+/F2 11 Tf
+13.2 TL
+ET
+BT
+1 0 0 1 189.7553 741.8898 Tm
+T*
+ET
+0.164706 0.141176 0.12549 rg
+BT
+/F3 30 Tf
+36 TL
+ET
+BT
+1 0 0 1 153.9078 480.9449 Tm
+(Qu'est-ce que le MLM) Tj
+T*
+ET
+BT
+1 0 0 1 230.1678 440.9449 Tm
+(réellement) Tj
+T*
+ET
+0.788235 0.635294 0.360784 rg
+BT
+/F4 14 Tf
+16.8 TL
+ET
+BT
+1 0 0 1 215.5978 400.9449 Tm
+(Résumé complet du module 1) Tj
+T*
+ET
+0.541176 0.521569 0.501961 rg
+BT
+/F1 10 Tf
+12 TL
+ET
+BT
+1 0 0 1 154.8078 190 Tm
+(Document récapitulatif \227 à conserver et consulter régulièrement) Tj
+T*
+ET
+Q
+q
+1 0 0 1 51 784.8898 cm
+Q
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.992157 0.976471 0.94902 rg
+n
+140 740 320 20 re
+f*
+0.662745 0.462745 0.117647 rg
+BT
+/F2-0 10 Tf
+12 TL
+ET
+BT
+1 0 0 1 230.1378 746.8898 Tm
+(P H O E N I X   P A R T N E R S) Tj
+T*
+ET
+Q
+
+
+endstream
 endobj
 6 0 obj
 <<
-/Contents 15 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 14 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
 <<
-/BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F5 /Subtype /Type1 /Type /Font
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 8 0 obj
 <<
-/Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 14 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 9 0 obj
 <<
-/Contents 17 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 14 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 10 0 obj
 <<
-/BaseFont /ZapfDingbats /Name /F6 /Subtype /Type1 /Type /Font
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 11 0 obj
 <<
-/Contents 18 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 14 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+/Name /F4
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 12 0 obj
 <<
-/PageMode /UseNone /Pages 14 0 R /Type /Catalog
+/BaseFont /Helvetica-Oblique
+/Encoding /WinAnsiEncoding
+/Name /F5
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 13 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260801073457+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260801073457+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+/BaseFont /ZapfDingbats
+/Name /F6
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 14 0 obj
 <<
-/Count 4 /Kids [ 6 0 R 8 0 R 9 0 R 11 0 R ] /Type /Pages
+/Contents 15 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 16 0 R
+/F2 8 0 R
+/F2-0 17 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
 >>
 endobj
 15 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 552
+/Length 4513
 >>
 stream
-GasIdbAQ&g&A7<Zk12@S)(sf/\oCmVL_!)-6NLNqKaq?YFs9T(mq53BL<q7q,]L$Da35#bK&i!8g2t-^)Ah9:Uektp7MsW6\>lUm9#Mip<"RF\V`\/sV*b2am7OdG<[_l,Jft^m%-S?_kEYN[-uC,t[ON1$mA(6sGMan`$85Ye6N4*I`s+`[;hH0WRZa1oVl=aXaV3BBYN=Q&7F'0lZC>>Gn_aGjcjE0PB[)(JTm<7WI4.MBXjuoZe(#Ja(:_9a93bnZCL1..?5NBn)SaqJYpDmm;1D(6)teJo/'&S]*<[6(T<5CGSqq&nR>GVO%LoI-AD/_'nc<]0VK"\H8r)@uPOL[]ZjEe&eI6@sYI%j4>]46IrE<DtD4A,D)s0Qg,FRL0;C$<-r6&*&'fKYT3Q&GO=GO0)#0jl/C=@]g&`*FpAEG_(\!'"A>IhgU;KR#4B/tiGo\Ojr,=30'U+EgtI5C$U:kiiTT=2Yih@J?Mer"D;=rVnjqqWFgIo6g>Pb#'"fI7PrA%Q;&qnGS2jgXc7as4/Ta8=8+*('<*?N%g#~>endstream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+0.980392 0.968627 0.94902 rg
+n
+0 0 595.2756 841.8898 re
+f*
+0.082353 0.05098 0.031373 rg
+n
+0 0 595.2756 34 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 28 12 Tm
+T*
+ET
+BT
+1 0 0 1 385.2906 12 Tm
+(Module 1 \227 Qu'est-ce que le MLM réellement) Tj
+T*
+ET
+0.541176 0.521569 0.501961 rg
+BT
+/F1 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 295.4138 20 Tm
+(1) Tj
+T*
+ET
+Q
+q
+1 0 0 1 51 763.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 2 Tm
+/F3 20 Tf
+22 TL
+(Résumé complet du module fondateur) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 727.8898 cm
+q
+0.541176 0.521569 0.501961 rg
+BT
+1 0 0 1 0 17 Tm
+/F5 9 Tf
+13 TL
+(Ce document reprend les points essentiels de chaque chapitre du module 1. Garde-le à portée de main pour une relecture) Tj
+T*
+(rapide, sans avoir à reparcourir l'intégralité du module en ligne.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 721.8898 cm
+Q
+q
+1 0 0 1 51 719.8898 cm
+q
+1 w
+1 J
+0.909804 0.87451 0.815686 RG
+n
+0 0 m
+493.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 51 706.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 1) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 674.8898 cm
+q
+BT
+1 0 0 1 0 4.5 Tm
+18 TL
+/F3 13.5 Tf
+0.788235 0.635294 0.360784 rg
+(Ton histoire avec le MLM & pourquoi commencer par un récit) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 654.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Le cerveau retient mieux une histoire qu'une information abstraite.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 634.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 L'identification \(se reconnaître dans le récit\) crée la confiance.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 614.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Un récit authentique désamorce la méfiance mieux qu'un argumentaire.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 596.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 2) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 564.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Les 25 idées reçues sur le MLM) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 544.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Chaque idée reçue contient souvent une part de vrai et une part de faux.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 524.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Reconnaître la part de vrai renforce la crédibilité plutôt que de l'affaiblir.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 504.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Un tableau comparatif et une FAQ de 10 questions complètent ce chapitre.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 486.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 3) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 454.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Histoire du MLM) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 434.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 1886 : naissance de la vente directe avec Avon \(California Perfume Company\).) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 414.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 1945-1959 : structuration du modèle multi-niveaux \(Nutrilite, Amway, Tupperware\).) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 394.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Aujourd'hui : professionnalisation, live selling, intelligence artificielle.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 376.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 4) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 344.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Comment fonctionne réellement le MLM) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 324.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 L'entreprise fabrique, fixe les prix et définit le plan de rémunération.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 304.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 La distributrice vend \(marge directe\) et peut recruter \(commissions multi-niveaux\).) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 284.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 5 exemples chiffrés détaillent marge, commissions, bonus et effet d'équipe.) Tj
+T*
+ET
+Q
+Q
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.082353 0.05098 0.031373 rg
+n
+0 0 165 30 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2-0 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 28 10 Tm
+(PHOENIX PARTNERS) Tj
+T*
+ET
+Q
+
+
+endstream
 endobj
 16 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1650
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
-stream
-Gau0CgN)%,&:O:Slr,3CA;25C>Mg.J:=?C/Z)^!/7P>;Zg;rb-K7rUhI<P_6Q5l6*47%3.^a&rN]puD:#!W#?q_t\Z4tP[k,m+puZ3801%a-B4=IqXFGZj<e=TDbDVf@gVa>6$\I<X,lePR*-5n_.uEos34Q@bE!^,tl_1^Kif4?rE,U$%1^9Yra>Km^WZ_[h/*?BXl@iQ.em;&3I<W>A]b^)-/*i=!(M,tKWc)Q*,Fr;>RNo*'NOR"&E@$1mc[c\pm6/AK$lh5aOaMD-eMhQOV1$WBWEYmSk1)`*U^J!N`P0G<mNp!kq`<>[Gn<O.obJ$>siEQ4.Y]I7/bSDi\</8!6')5MpLoAV^EUGk.?;[@aYK,s<*K2L9N(GSJ?d.o]*.6K0D$,ZGhmVir7f61f4k9sQphHu"\rt5D!^Zd=Qd[?O.aP2#>aW:ck[<"[f2ML@kd77SN_[2Jn3.jD>_8?lj."]Z41phKC&rJS+jB'Q^NL!:i:@DT>Wi#5MFre:oZKe*EOP^EQ$4\$*@g9X)Afc=6\r^Pa?\R:Uot%UuUNNt@%6cKb9I'(p9'3h7Ec9u;j*l]P5pr*2`3r\"D1[:kc>ajgW$Ve+G.c:u;Kd5&^20H?GE)6LrPkH-pA,NI%U@07&V#:WTgtPjr5_OY_.a=e+*WC<JS1[OPReN,n]$]?Hl/k/-&.!fLJa/l^1$@Qo6pr[GEE5;p+hspMbiptT9m#'^kQZa'7OoYnZG:A)H]Vd;.?iXOo+TU_0"?gE3Hho@j3Wa1>c%$(E:^+djdt"bb&-T^i3_<*F3a:%g%ac^ZQ=*6K]8AS5,Sn>3DthP/%g0VUSg!$t]tr/Z*WlUj97KpM@d#RF(u6.9g)9?D2pZh=XsMIQ2c8E.#S;b^8DPWH*c)2=62BH.t.WSJYRs&M)5oH`sSI+a8MDPsFLkV%W"j@I.fPlsF,Z%)VZ2A-])$@22PeXj/L`.s2?]/fZbN+S;4i*J$Ko`#`LMF!qkf0]rDs5Y&"F@QCG_Y>A#I#aFujcF$&_9+9*,PXNQi5s0Pei%:I^miXb<U24kgkutEiOf3l5mRbF-a:XNScUqW;L8,QD%fZ0h+.-P.#dK,LqrDfd.F_PgCW<5,3/Mp!q[6Y-9gi+k[B>`82T5V[.+F/t7=mt1JC#\GjkdnAo,E;%Hii#a3cqN55Vr>0@["Qki^)Wf*M5UUi.9:c"T#LWDCkQIi<gZ6UfiR4s&Wlel8ktTKhX.n#L3o^hX=(sHtt$UJIMru@&!jPOh*rGK*?t<q7\m1%b18'bq^?2Yq4&E!\AAH)D>0,>k:A*KF1\JW`NhmU>l!%-N%b-9pEJkCgK>`mk\(7bsptgJPn4=7$rsO`8#aX?DEnC)hhm?FB`3]W^m4AeQH["f`#_6FEg;Pc.rf/HV`*PC.keZfF"\C!\k*H)4r=)n3B/i;&6SRlff=MP?SrNI!,8j`?lR3YHK9t1gM_57g3D)WDAmIWLfotCM<B/W`Q]*ThuTgV@j>8bo0EJL'F!U__E-<VQU-N*6Fu,`!T2:/_uRjdi)GXB*H)R$r,AF6hdNaRi^>CeWa6IATP7@k1EI#'VqL.&V5=mFPk"lEj*X6qR(B>a!M3NK_f78Ba+gHB<Z7mdueXU/1F1)>4H"Mjp*ZXa^<d&5AL~>endstream
 endobj
 17 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1360
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
-stream
-Gatm:9lK&M&A@7.bUqM%<u(D1gp0M/#"X8^lRbrK(Ik8B/n@Qt`F/T3qhC9CM44i#+9[KoOjq$h1N-k.`V:,*Ircb/]V_<M(*jMrmmptd7dGE4?(X9P7<K?CF[Ar2<(0^ERFQ:DG(4,@mC^`>Us'4H1(dMd?'/-oqfimq<KcJn7<'C/AJD$d/^nq3V:kB.NIu4?;-@J0^ba/pV?4D`W[JDQi[C5a@7*_k,ZTAETSol:X..k!]3G,ZHhDO[-XGQ`gg.*Jd/"]`5G$Y&/&8+Dict3kg\OrZA!=^]0E,4eiDZN8fdjr:L\h=^Rktq]D:Lq?iRM#)4;4G?.*<3c(H%ehW!i+t^S$J3f2;&JGd*<e[%\fU0ToMprIQF;cfKc$1*(XX%NM(G@\,"udQFKp>$Al&D_`ekKK8)="qC`fJ\R-/?`njk>Q8k>q&=CQ#*4?6Ig.o6Cbd<!:3!=d<T^Ms%em9*(J"F2<Z^m6c!j6#?k>b-,%ct)(`*KVjW+Wk#XO"5Em3m#?mEgWY,raq,"D,\!=iC5BD#RMohUBXWuTRZ72bQ-F+NM)(BD.T;ENU(bO#t8Fh0Au&(.Hdn_u2!_5=?kBk7<oCHFZZ0^oRC[jrAu1p30G)'n_&;r:1\pA*FYRrDRAJA)'g)SRpJE*@Z3P^Q9DXCF],\7<9(3jA#0)2Floh*F'!QuZc>DOr[c/3pMH8+M`KY.*S"0:NMT5s&qZC%N8'Go)A"2-%j=9UF;Z4d^NgZ5l(uWhrom>Q4Sqg90n0SOFb=O5Q"@NUC#,$+\S,ODVRs;N4O2SKG)b._/R14m@D!mHpatDE;;u<H2%ti=fh$-0MNgj>oFCc+IAs=IemH:c*P]BJ'R\S9p1\`/6?k74]<H&<Q4^rCn?C<bN-LVqaE.EcLGQ%0WeLUVU9_HKST])apNhH[oq(AE1p:lH7^bc3)=XQV9DT0Nh^;Gtc@ajfRS&&bPYX#Pk7!ru9&MKfg`=,IBj\+Q0gne]^=KX]%cmd"+s2_De+#mcTL5[X=X[QcQ+uBAMksTHO_;e4M^]+VO_:>L2\W`5q/1l3:!Ybg0cO(<='Zj-]apdc/VYQtJi.YIU/"U&24IO@A=:h%8Z6]P:O/cq.C1]mS=n4Q^WrbH%D,2(4bjLWDh`%A'U%#>D]hoBGflpL\7=45Dqk1>Kf&GY+sV!dkji"<QD"DMS$"-$OKbN)%25EO).\@tC<Z,MOoSZl*]SU?nOQ'[9*&?+qH=[:IS5GO;&W?97XjC!*n5`!SP\PHB5N'\6cM)uH9uDmA*n0KRO4c'RmH:QkSY`^o`<Y*1tY!`UrEi7s%Nf5_[l0<,'7*4$\j:(Me'#j@@`nsqN+5GUYZIfl@mR`#~>endstream
 endobj
 18 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1771
+/Contents 19 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 20 0 R
+/F2 8 0 R
+/F2-0 21 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+19 0 obj
+<<
+/Length 3883
 >>
 stream
-Gau`TbAu>q']&X:m\[CTEG:$_ZTH3)>%ci_3`-Z`d0?Hj)(Ann8E]O94TH`rIaQW)1)c3BM'.Y%mlC.#J;chm1&"i%7'C3EqM#T?BXT0%#;OK[d<'R(q'[Z^O;AK47@L,OL1=JA&a@hCj6f[",`&`OV*&?USejD$8^!Gj6't/)i=pr:Lm(-G):/(&p[NKL7tD&cR"?lM3Q!RH2H.0U,0GPV`>8a+3^*tVFXg8V_QRZoG(0.2H?h6A=4=L:ZbPbkp$7P-faF6sU=m_:GOZY]'OeS`pTe'5Q,LI#6F'\1Yr)DtV52Fi,b2VsG=d,+'.0bPf!=OaSf/k/@p)Di'!W]6E"#m3Z>KMuEZ9E=UlPY>C;c(o'SS.J^@U,1TWksZ@?b?Yf=@t74BZRf9L6gbW'JaT)PV]H8_FmAfKRm:crJHCDfYj?fj>Q%pJWR09Qu!'%Bs`e]2,hbeAQD)\C3C,)#"S)*>VAH?_oAT.1Q5J>pUCm*/h+(D*slDVJR5SNJ8,6L(gdJc2_4ef#;86=S"6FJGTC%e3EOMG9rW_/-DS:DM.5]kS<#61nWPOe$hrm'=npD*4.`"=rJVd37D2`OpHDKJfpGq#Y%/kpE"?A[5*P82IocO#Zj61.n`[aY&3O()-/9bdo4iE;Llo!pppbQ=&IW\=u<oLUFE#7hGa4%49[s\9gKICKq:AlaJ?O>mk#efI'uS*a.)M393=/7,A7$h7c-MD^#Q_=o&f;]VOW<?H]5jWFF*Wo3*(pn12#-PL!'Ej$i?t?>.Y:.1rN;bk4BEULu1P&nE"bk9IVIQmQ;Zi#rk$$0mY,aAK4cA_+TZX5W/p<)$@1>"m.qe\qc.Q<A1auRFP+_*(0+8*F2!)<ETHN-OR.[TI89l12Fndq@pt+q$CNTf]\:aIVF$aW:./%&4!Ym1,GOj4/AC](_(-XCAjiB@2Nb0W-YCZBNb*<YQ`.!'Cb[g!`iu(m?[?`M"WLIk;U9SKh[EFJ1kJ<G@C^k\fNW/Y(^B6J5c#S=/jUaf+%I@<L)$L&tNTHBQeKG1nAmk69W;FLKG.OW]fO)[n#Y>AmoMHHWbQI)EV!R"VPV5Ga)pJNUjp4DTaa1K)`;Eb[I*^\1#F,Z1=.9s09"r28oanL,,Q^5!1U^T(VpW7[F'R0F7EaA#UAkL!esi@/hH>0dW;S/4;[^`4N2EmYONqk'h:.K\daXj_;(uc5'5.XG?sJg,PWFM_ItMI_r_R;)EQ<TS+RNB"It-\"Vme/_"h*4HF<OoT4)=2)NUh]9ZWWMI]Mkn%*F@e;t#@G8l:VC!3i8-&U6QZ+4=L_AZs5Rqb-N>-+9cQ<;TklWTF?/'>?'@P%-ib%;3`a`rQ^!Agh/Jq@oY%5p0pWY,Z!+18Km-Z2Tqj/ab/]l'<Jg^/"M^hs7b)XJ'#laFn3%ZZ6Oj,]-`j\WUT<SO5GXJbNoK'.I:?gr\?M<q[?$ciJ?d+WB#X<>*5Y(n&[$g6Yfa5Bk\`aT6Kl)JB8M[h$_>Eo=^`oXYr3QMTBoH)9]14FW631e`q1rMa^6Rn5:PC'M'fFOki:=IoWcPVi/FZ\B)\[U<=WuP0U_qk_a1rE2[=rMoLT$JRf_0LcXn(8]WmR;Fp2J[)F)A\WEqtCN4_W!"W`UZ*[OjVc\59(6XI's=r/d:Z@YktDrh$]LR8(Geb)7"RtZ]-Hho#<7Y-e&Z/Rn_Mg(DF6$Q<9Q.Ig9Ccle(YDaL.KRf<)K!hFK4uj.BM39aN-N4&GZhTXQHfg:kjOn1Uo_IVc&V8,iW?e1l+~>endstream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+0.980392 0.968627 0.94902 rg
+n
+0 0 595.2756 841.8898 re
+f*
+0.082353 0.05098 0.031373 rg
+n
+0 0 595.2756 34 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 28 12 Tm
+T*
+ET
+BT
+1 0 0 1 385.2906 12 Tm
+(Module 1 \227 Qu'est-ce que le MLM réellement) Tj
+T*
+ET
+0.541176 0.521569 0.501961 rg
+BT
+/F1 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 295.4138 20 Tm
+(2) Tj
+T*
+ET
+Q
+q
+1 0 0 1 51 773.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 5) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 741.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(MLM légal vs pyramide) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 721.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Critère clé : origine réelle des revenus \(ventes vs frais d'adhésion\).) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 701.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Vérifier : droit de retour, transparence du plan de rémunération, clientèle externe réelle.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 681.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Se méfier des promesses d'enrichissement rapide et de l'opacité financière.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 663.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 6) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 631.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Les qualités à développer) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 611.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Discipline, communication, écoute, leadership, organisation, résilience, confiance en soi.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 591.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Ces qualités se cultivent progressivement, elles ne sont jamais innées.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 571.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Un exercice pratique accompagne chacune des 7 qualités.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 553.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 7) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 521.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Les 50 erreurs de débutant) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 501.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 5 catégories : communication, mindset, vente, organisation, équipe.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 481.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 La précipitation est la cause la plus fréquente de ces erreurs.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 461.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 À utiliser comme outil d'auto-diagnostic mensuel, sans culpabilité.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 443.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 8) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 411.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(15 études de cas) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 391.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Des profils très variés : mère de famille, étudiante, salariée, retraitée, introvertie...) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 371.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Il n'existe pas un seul chemin valable pour réussir en MLM.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 351.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Chaque parcours doit être cohérent avec sa propre situation et personnalité.) Tj
+T*
+ET
+Q
+Q
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.082353 0.05098 0.031373 rg
+n
+0 0 165 30 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2-0 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 28 10 Tm
+(PHOENIX PARTNERS) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+20 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+21 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+22 0 obj
+<<
+/Contents 23 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 24 0 R
+/F2 8 0 R
+/F2-0 25 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+23 0 obj
+<<
+/Length 5532
+>>
+stream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+0.980392 0.968627 0.94902 rg
+n
+0 0 595.2756 841.8898 re
+f*
+0.082353 0.05098 0.031373 rg
+n
+0 0 595.2756 34 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 28 12 Tm
+T*
+ET
+BT
+1 0 0 1 385.2906 12 Tm
+(Module 1 \227 Qu'est-ce que le MLM réellement) Tj
+T*
+ET
+0.541176 0.521569 0.501961 rg
+BT
+/F1 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 295.4138 20 Tm
+(3) Tj
+T*
+ET
+Q
+q
+1 0 0 1 51 773.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 9) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 741.8898 cm
+q
+BT
+1 0 0 1 0 4.5 Tm
+18 TL
+/F3 13.5 Tf
+0.788235 0.635294 0.360784 rg
+(Exercices & plan d'action personnel) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 721.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 10 exercices pratiques \(histoire, valeurs, message, objectifs...\).) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 701.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 5 mises en situation avec réponses suggérées face aux objections courantes.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 681.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Un plan d'action personnel qui relie l'ensemble de ces exercices.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 663.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 10) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 631.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(FAQ de 50 questions) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 611.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 5 catégories : démarrage, produits/vente, argent/fiscalité, équipe, organisation.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 591.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Une ressource à consulter régulièrement au fil de tes premiers mois d'activité.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 573.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 11) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 541.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Quiz de validation \(20 questions\)) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 521.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Score minimum de 70% requis pour valider le module.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 501.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Chaque question s'accompagne désormais d'une explication détaillée après réponse.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 481.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Essais illimités \227 prends le temps nécessaire.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 465.8898 cm
+Q
+q
+1 0 0 1 51 463.8898 cm
+q
+1 w
+1 J
+0.909804 0.87451 0.815686 RG
+n
+0 0 m
+493.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 51 431.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Checklist de validation finale) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 410.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai rédigé ma propre histoire personnelle avec le MLM.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 390.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( Je sais expliquer la différence entre un MLM légal et une pyramide illégale.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 370.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( Je connais au moins cinq idées reçues et sais y répondre avec nuance.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 350.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( Je comprends comment se calculent marge, commissions et bonus.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 330.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai identifié 2 à 3 qualités à développer en priorité.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 310.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai repéré les erreurs de débutant qui me concernent le plus.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 290.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai réalisé au moins la moitié des 10 exercices pratiques.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 270.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai rempli mon plan d'action personnel.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 250.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( Je sais où retrouver la FAQ complète en cas de besoin.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 230.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai validé le quiz avec au moins 70% de bonnes réponses.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 209.8898 cm
+Q
+q
+1 0 0 1 51 183.8898 cm
+q
+0.541176 0.521569 0.501961 rg
+BT
+1 0 0 1 0 17 Tm
+/F5 9 Tf
+13 TL
+(Une fois cette checklist entièrement cochée, tu disposes des fondations solides nécessaires pour aborder sereinement la) Tj
+T*
+(suite de ton parcours de formation.) Tj
+T*
+ET
+Q
+Q
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.082353 0.05098 0.031373 rg
+n
+0 0 165 30 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2-0 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 28 10 Tm
+(PHOENIX PARTNERS) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+24 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+25 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
 endobj
 xref
-0 19
+0 26
 0000000000 65535 f 
-0000000061 00000 n 
-0000000143 00000 n 
-0000000250 00000 n 
-0000000362 00000 n 
-0000000470 00000 n 
-0000000580 00000 n 
-0000000785 00000 n 
-0000000900 00000 n 
-0000001105 00000 n 
-0000001310 00000 n 
-0000001394 00000 n 
-0000001600 00000 n 
-0000001670 00000 n 
-0000001951 00000 n 
-0000002030 00000 n 
-0000002673 00000 n 
-0000004415 00000 n 
-0000005867 00000 n 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000134 00000 n 
+0000000183 00000 n 
+0000000482 00000 n 
+0000001609 00000 n 
+0000001716 00000 n 
+0000001823 00000 n 
+0000001935 00000 n 
+0000002044 00000 n 
+0000002153 00000 n 
+0000002264 00000 n 
+0000002380 00000 n 
+0000002464 00000 n 
+0000002767 00000 n 
+0000007333 00000 n 
+0000007441 00000 n 
+0000007554 00000 n 
+0000007857 00000 n 
+0000011793 00000 n 
+0000011901 00000 n 
+0000012014 00000 n 
+0000012317 00000 n 
+0000017902 00000 n 
+0000018010 00000 n 
 trailer
 <<
-/ID 
-[<d6e3d51fc9f7fc90622dc11a51a37f92><d6e3d51fc9f7fc90622dc11a51a37f92>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 13 0 R
-/Root 12 0 R
-/Size 19
+/Size 26
+/Root 3 0 R
+/Info 1 0 R
 >>
 startxref
-7730
+18123
 %%EOF

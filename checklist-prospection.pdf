@@ -1,86 +1,539 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 5 0 R
+/Producer (pypdf)
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Type /Catalog
+/Pages 2 0 R
 >>
 endobj
 4 0 obj
 <<
-/BaseFont /Times-Bold /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/Contents 5 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F2 8 0 R
+/F2-0 9 0 R
+/F3 10 0 R
+/F4 11 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
 >>
 endobj
 5 0 obj
 <<
-/BaseFont /ZapfDingbats /Name /F4 /Subtype /Type1 /Type /Font
+/Length 4454
 >>
+stream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+0.980392 0.968627 0.94902 rg
+n
+0 0 595.2756 841.8898 re
+f*
+0.082353 0.05098 0.031373 rg
+n
+0 0 595.2756 30 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 28 10 Tm
+T*
+ET
+BT
+1 0 0 1 472.1396 10 Tm
+(Checklist de prospection) Tj
+T*
+ET
+Q
+q
+1 0 0 1 56 775.8898 cm
+Q
+q
+1 0 0 1 56 753.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 0 Tm
+/F3 22 Tf
+22 TL
+115.0168 0 Td
+/F4 22 Tf
+22 TL
+(n) Tj
+/F3 22 Tf
+22 TL
+( Checklist de prospection) Tj
+T*
+-115.0168 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 56 737.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 2 Tm
+/F1 10 Tf
+12 TL
+129.6228 0 Td
+(À cocher avant, pendant et après chaque échange) Tj
+T*
+-129.6228 0 Td
+ET
+Q
+Q
+q
+1 0 0 1 56 716.8898 cm
+q
+1 w
+1 J
+0.909804 0.87451 0.815686 RG
+n
+0 0 m
+483.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 56 682.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 5 Tm
+/F3 13 Tf
+18 TL
+(Avant l'échange) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 657.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(J'ai identifié le cercle d'appartenance de cette personne \(proche, connaissance, inconnue\).) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 633.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(J'ai qualifié ce contact : chaud, tiède ou froid.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 609.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(J'ai consulté sa fiche prospect si elle existe déjà.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 585.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(Je sais pourquoi je prends contact aujourd'hui, sans intention forcée.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 551.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 5 Tm
+/F3 13 Tf
+18 TL
+(Pendant l'échange) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 526.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(J'écoute davantage que je ne parle.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 502.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(Je partage mon expérience personnelle plutôt qu'un argumentaire.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 478.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(Je pose des questions ouvertes pour comprendre ses besoins réels.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 454.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(Je respecte son rythme de décision, sans précipiter.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 430.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(Si une objection survient, je la valide sincèrement avant de répondre.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 406.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(Je n'insiste jamais après un refus clairement exprimé.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 372.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 5 Tm
+/F3 13 Tf
+18 TL
+(Après l'échange) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 347.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(Je note le résultat de cet échange dans sa fiche prospect.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 323.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(Je mets à jour sa qualification si elle a évolué.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 299.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(Je planifie la prochaine action et sa date.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 56 275.8898 cm
+q
+BT
+1 0 0 1 6 6.5 Tm
+17 TL
+/F1 10.5 Tf
+0.164706 0.141176 0.12549 rg
+/F4 10.5 Tf
+17 TL
+(n) Tj
+/F1 10.5 Tf
+17 TL
+(  ) Tj
+(En cas de vente, je prévois mon message de suivi.) Tj
+T*
+ET
+Q
+Q
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.082353 0.05098 0.031373 rg
+n
+0 0 165 30 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2-0 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 28 10 Tm
+(PHOENIX PARTNERS) Tj
+T*
+ET
+Q
+
+
+endstream
 endobj
 6 0 obj
 <<
-/Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
 <<
-/PageMode /UseNone /Pages 9 0 R /Type /Catalog
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 8 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260802142331+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260802142331+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 9 0 obj
 <<
-/Count 1 /Kids [ 6 0 R ] /Type /Pages
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 10 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1329
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
 >>
-stream
-Gb!$FgMbh)'ZT&%=.D4]Kr=L9le^&8*EmR#[X&Gdo"rOk6;JDQPe?_)ha^:^S]d7,.,Z5(AW*@3IQZN`Gg)$'O,)>m-@3;"2t&_G6-D.U3/VGGOfk!_G@sd81Kb!@MDS*tL21$J62'HB$*076M+!Z*PfGo/o-,Q_C&RlZ@_%SWUkg<*2^9Z[biBH',hoLN0Tj<gAU,geY&UcIWXtbpgdbF6knkE.nrZ<#`#1.BR\*rW?XE^-refQ=Sc?7uMp<t/hd7pAd;hUtf+1p$R>A@(df%mX>@%56);!8.e(1sFX38eqc-bh6YpK;/#X6Fp!P5?S%41R!KPfdaS?\;&*cmqKWrUts`fIEV38V<3,XNjUlUTqsM&9$05J"^FHuF*jK_KH5S=ZMOl2G`+gd;:6*A_6:cRD;^9LOF7acmrMO!)@@_8E^aK;\bnO>nE'0:Q<A#3E8SXgY$KWp(;+e]eG>89^l<p0&fe;0f51H;41Mn[?!Uhh&W;]I/?pku$r?rk\ViD^rr:38qC:"N%$#IMm92;k2#sR>`Wlo_>t20)ing,l>f+))`cO8NQV0<6ZHd5"1\_a6>R04GKU""[)C;*VS@I=jqj-0*l8VCKPeB&q;l+'Lq4,B$-3<l)$7Pj+F4$;lOVjbA*o_>@fnPW2A'NFJ\Cd85EIA2@ZrOLC016"VT]LauJQ30$#mKF0DcS7?d@A^'+;E?<)>s?m>5<Po]hi[G%f"eG16lqR3<0D9Zf6MA7cF$5BYH\cCh+XUW^#n-j>lFG1.h05qS8ekb%*bEu"u-$aNG1^t;^B\W7SY&=bd4;;VO*R^h]%0fn?gYOJ8\T(GUkN1MXZu0aF;=ubX_LIpnr&.a:pDQ@BdSk)S&8BmG>m)BR2k%BlA$8c$0SJ_ZrF=j:$mEh+G`B)r03cb5NV59=G;$0"D:PCLd^TD;XD^Y_S%aVZPd/\rEL+?>`n#E:G!8"5$f&RmFrH)u<![65%b6,Rbi.Dkm95-62Uk"RV?rI]oRp6M^I%]dU]&p&f&7GQIT79kjKZ]lH\#C*dqLng-/"-c4rNW_8F>Tbd(YY.m1.i<a+P)+'^]i\J^WKood>gN?BRZSjllm4[e4@*-=nS!&idl>M@53`7b-A,&"Oicc0BE^kH93C"\)Ik27;V:,a6mlCtSIOI'5u^puFRW[^F)7<hgH.6*Il)5<EV^iSQ&C8#QCZer#[cA2%lV3V)PCq6SiiN'1@DL4U;t(DU>%D:Lj$),Zp:/b@#BC-WAg4ESlk^^/HJ!_==s=/qamC6>'u$+jrN<6i[(LRQbOTa;YnJHGQnDQWG-i$N]Vlcm^;,bhVp!FI2X2#~>endstream
+endobj
+11 0 obj
+<<
+/BaseFont /ZapfDingbats
+/Name /F4
+/Subtype /Type1
+/Type /Font
+>>
 endobj
 xref
-0 11
+0 12
 0000000000 65535 f 
-0000000061 00000 n 
-0000000122 00000 n 
-0000000229 00000 n 
-0000000341 00000 n 
-0000000449 00000 n 
-0000000532 00000 n 
-0000000736 00000 n 
-0000000804 00000 n 
-0000001084 00000 n 
-0000001143 00000 n 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000113 00000 n 
+0000000162 00000 n 
+0000000439 00000 n 
+0000004945 00000 n 
+0000005052 00000 n 
+0000005159 00000 n 
+0000005271 00000 n 
+0000005383 00000 n 
+0000005492 00000 n 
 trailer
 <<
-/ID 
-[<2d944835db6968d13049ce47a680b178><2d944835db6968d13049ce47a680b178>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 8 0 R
-/Root 7 0 R
-/Size 11
+/Size 12
+/Root 3 0 R
+/Info 1 0 R
 >>
 startxref
-2564
+5576
 %%EOF

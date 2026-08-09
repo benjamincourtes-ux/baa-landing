@@ -1,155 +1,1386 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
+%âãÏÓ
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 5 0 R /F5 7 0 R /F6 10 0 R
+/Producer (pypdf)
 >>
 endobj
 2 0 obj
 <<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+/Type /Pages
+/Count 4
+/Kids [ 4 0 R 14 0 R 18 0 R 22 0 R ]
 >>
 endobj
 3 0 obj
 <<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+/Type /Catalog
+/Pages 2 0 R
 >>
 endobj
 4 0 obj
 <<
-/BaseFont /Times-Bold /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/Contents 5 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F2 8 0 R
+/F2-0 9 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
 >>
 endobj
 5 0 obj
 <<
-/BaseFont /Times-Italic /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
+/Length 1027
 >>
+stream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+0.980392 0.968627 0.94902 rg
+n
+0 0 595.2756 841.8898 re
+f*
+0.788235 0.635294 0.360784 RG
+1.2 w
+n
+28 28 539.2756 785.8898 re
+S
+2.2 w
+n
+60 711.8898 m
+535.2756 711.8898 l
+S
+n
+60 165 m
+535.2756 165 l
+S
+0.788235 0.635294 0.360784 rg
+BT
+/F2 11 Tf
+13.2 TL
+ET
+BT
+1 0 0 1 189.7553 741.8898 Tm
+T*
+ET
+0.164706 0.141176 0.12549 rg
+BT
+/F3 27 Tf
+32.4 TL
+ET
+BT
+1 0 0 1 141.6588 480.9449 Tm
+(VDI vs Auto-Entrepreneur) Tj
+T*
+ET
+0.788235 0.635294 0.360784 rg
+BT
+/F4 14 Tf
+16.8 TL
+ET
+BT
+1 0 0 1 215.5978 400.9449 Tm
+(Résumé complet du module 2) Tj
+T*
+ET
+0.541176 0.521569 0.501961 rg
+BT
+/F1 10 Tf
+12 TL
+ET
+BT
+1 0 0 1 154.8078 190 Tm
+(Document récapitulatif \227 à conserver et consulter régulièrement) Tj
+T*
+ET
+Q
+q
+1 0 0 1 51 784.8898 cm
+Q
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.992157 0.976471 0.94902 rg
+n
+140 740 320 20 re
+f*
+0.662745 0.462745 0.117647 rg
+BT
+/F2-0 10 Tf
+12 TL
+ET
+BT
+1 0 0 1 230.1378 746.8898 Tm
+(P H O E N I X   P A R T N E R S) Tj
+T*
+ET
+Q
+
+
+endstream
 endobj
 6 0 obj
 <<
-/Contents 15 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 14 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
 <<
-/BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F5 /Subtype /Type1 /Type /Font
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 8 0 obj
 <<
-/Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 14 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 9 0 obj
 <<
-/Contents 17 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 14 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 10 0 obj
 <<
-/BaseFont /ZapfDingbats /Name /F6 /Subtype /Type1 /Type /Font
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 11 0 obj
 <<
-/Contents 18 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 14 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+/Name /F4
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 12 0 obj
 <<
-/PageMode /UseNone /Pages 14 0 R /Type /Catalog
+/BaseFont /Helvetica-Oblique
+/Encoding /WinAnsiEncoding
+/Name /F5
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 13 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260801140423+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260801140423+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+/BaseFont /ZapfDingbats
+/Name /F6
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 14 0 obj
 <<
-/Count 4 /Kids [ 6 0 R 8 0 R 9 0 R 11 0 R ] /Type /Pages
+/Contents 15 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 16 0 R
+/F2 8 0 R
+/F2-0 17 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
 >>
 endobj
 15 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 536
+/Length 3637
 >>
 stream
-GasIcbA,ft&A7<ZlBiDNR@a-m2r9NK3/9Ic+KuY,c^G;hCp]B(qruMN6BHjCd7mD$WiB\;P!>COeGp[aI/$)PL%54!_P"Q^Xt5#:+pP$AJqu$=jk6+O(&I*fS[r[F6@%l.%#GO)5bE#*.YJ<uBa`n,<RF'F-[d[n\1L6"]Q1Ukq6rCk#5DSm!FH3l(HDdtoAkXaB=-d%k1ZelS6Zrl0^&GSK*=rC'o43aRK5(9q4-UG:l)tmX5VscPmuSeE.\V.f\nXSf^f$oDX\)]IW1Nm>L)#sI#mhGb,[X*O>C3(#Vne3HY#oVLhQ:$R>=nep=D\Lhq8QKK&eH?^.dVbp'r`gCrW0\hR,_C:46m+fWS0PUYkS)8\Yqt:KU%df]X2RY$`@Fg<t7_Z:!/"V`G93)UWY&A"B:Dn9,R_H'F6R,t1<34=cU/r83fYN<i2n']k"[mAdE_m=7AF=-'9>0\2<&nUS=4jmBJ7fA*dseA%e#bUEd,4`E)t4HK/t^$J[hZ=<W`+8Qp+9B,nT0"YjXL#P&K_7>^~>endstream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+0.980392 0.968627 0.94902 rg
+n
+0 0 595.2756 841.8898 re
+f*
+0.082353 0.05098 0.031373 rg
+n
+0 0 595.2756 34 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 28 12 Tm
+T*
+ET
+BT
+1 0 0 1 413.3066 12 Tm
+(Module 2 \227 VDI vs Auto-Entrepreneur) Tj
+T*
+ET
+0.541176 0.521569 0.501961 rg
+BT
+/F1 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 295.4138 20 Tm
+(1) Tj
+T*
+ET
+Q
+q
+1 0 0 1 51 763.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 2 Tm
+/F3 20 Tf
+22 TL
+(Résumé complet du module 2) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 727.8898 cm
+q
+0.541176 0.521569 0.501961 rg
+BT
+1 0 0 1 0 17 Tm
+/F5 9 Tf
+13 TL
+(Ce document reprend les points essentiels de chaque chapitre de ce module. Garde-le à portée de main pour une relecture) Tj
+T*
+(rapide, sans avoir à reparcourir l'intégralité du module en ligne.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 721.8898 cm
+Q
+q
+1 0 0 1 51 719.8898 cm
+q
+1 w
+1 J
+0.909804 0.87451 0.815686 RG
+n
+0 0 m
+493.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 51 706.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 1) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 674.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Comprendre les deux statuts) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 654.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Le VDI \(1958\) encadre spécifiquement la vente directe à domicile.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 634.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 La micro-entreprise \(2008\) simplifie la création d'entreprise, tous secteurs confondus.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 614.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Le choix par défaut de sa société ne remplace jamais sa propre réflexion.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 596.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 2) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 564.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Le statut VDI en détail) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 544.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 3 formes : acheteur-revendeur, mandataire, courtier.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 524.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Cotisations progressives selon 2 seuils ; retraite et maladie limitées sous ces seuils.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 504.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Aucun droit chômage classique ; fiscalité BIC ; plafond annuel à surveiller.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 486.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 3) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 454.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(La micro-entreprise en détail) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 434.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Création en ligne sur le guichet unique ; numéro SIRET sous quelques jours.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 414.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Franchise de TVA jusqu'à un plafond spécifique ; comptabilité simplifiée.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 394.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Pensez à l'ACRE et à l'assurance responsabilité civile professionnelle.) Tj
+T*
+ET
+Q
+Q
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.082353 0.05098 0.031373 rg
+n
+0 0 165 30 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2-0 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 28 10 Tm
+(PHOENIX PARTNERS) Tj
+T*
+ET
+Q
+
+
+endstream
 endobj
 16 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1387
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
-stream
-Gau0BgMYb*&:Ml+bZijH;+6VYD4_fgl$C_Yh,ITd!P`S"g0m6<%Oo!*If0aJ4)r_7H[ur`6_!)sS=+G16m0K6ir@U^^f:R,D?u=,WXTLT0rR:QZ9!=lMom6@AHG_s'j6^[aN?IC]fk]Zm^,Z_,Yp3E(l=-E/3jTq]KM24,,$H>-r+9BN+,Cm:1)[Efl9N=$Y'B<?8+ujAEiV6%kiJX8j0mJ8e1Xc!BEtJ$4jn*fmGNh?@H'0iG(CQXnj(#f@R&lo`hFCW8>8@`<_H:S7TaSTDHPW!=>h@,l@7\"a^>m47nl_DU;jj7450#3@d]>+aF8hRZK?VEK!JWOXJW]$AZ0NZ<&/Y$kPZ)8aJ)X-g1JdYs5Ba$02s5dB-W>'U#^``_4G4Efsh3%X4)6gj2T]DQ#dL",W)mlul*%@Vk?7W;Cb9_uPdNp-AR<&2.H;q'h8"ma!j`*e:%_qYX3O@j.N0CYO_aJ.UB<PVB?-AN(G;`o%LZP^u:hIE*G2+*J:gi2=KoEWdJoDT!iQ?W.a#!IA_Gr2Q(+%VMjIgBkM_M0cC0*(eF4*nZ8V0YB3WpV#)8&4FHZNVdZ]SKf>&i`:+HrO7u@M%5d*Fs7h8*-hnHb=A?jM(+!oq"a%)%7SQ];,gqVM[XJf*;n7e.qrs!$js_]Eb1c3jsi$S+X,!ARZr%Lc!iN`&%Q-m<Cr9($'JHh4TE'oDO3W.3+b2J0,HZJ#FV;&K>EIb.r*P4!n6OYd0TUTB&J:^bUAF7rHkTLL^"OrXdY"pkWu:AT#4(W9>PpDb-Y9c_3ER,_(n*MKj&@>MUMr9ES0<-dZYT7G#2_u\$D<7>Tt&V*]F>:=SJ.+'JF/3cn(#`8&@g(5!g%qFKHPs501Hjk59N#"Ur(%?lTu`%G$GTds$d/j&F,"Ob3G4Q]H[*KZ8T!E'$%7)\/aKV4.hCoKGc_*%Srj`r]Z(R[rkD:#L;7P^#TnUE%^&HM`ZPehilI4rCQ_(9_#F;EegtQYI3<Rlkg-2SF"U_*7t(mt;A&V&!_XFL8ct$JdQZ@;-FF/%A^Qolt)3aWW;55oQqUj+O_gfR;ge38lB07"V2!fSSI[Z3JQ")B5/Xb8"rcIq0M0K%o5M;Z!#&a#K3+E[#R/>KjJBja_e_du:\^Mq1`F$+UQB*]DHr:MoH5[D46`MK:ZEY-UHKRUrSW$`VY5,_Hi\gOtSnQqhI]=)-e\2%,nfA1p[bnaXl@jT8X/CoqgY_)IcL._G0cVgJ3E\m8?&I/$7ka1sj,Bj?1)qDs&"Gurn6+C]&f^<Y]oRKn3--&'K(.dajnM+l]OkeR4[7pR1*PBYP*#?jmJiNqa,pbUPfS^/*#8W<N)-Q:)fNipKk*>XSIe@"(AQZj0TisJ?7F[H&Zp#56j<Oc=P~>endstream
 endobj
 17 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1194
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
 >>
-stream
-Gau0B?#/4T'RcT\ESlqFWG>Y&5Pe9TP:6qdY[(iK$hL+Hnl3Gk*6AQT^[IG(LSPko$=3cgUCZ7'cT+$AJJeDXpg8.D+-,ja,6<tCYlU"W.3*9aE895eU9]ShR6X_`7@*$09ZoBrF5Ek"S!>NsEgB"RP,KeO!fVZlod5QSKJEm3b[MQN@S1</?e@ltGt3]!itS6#81DAfb2uS&?33R6!kpWd-@@d=VH/j(_!g3%\)1I3DQaT?iNW4Bpb2!:Y-.N>=)bg)j6L&qV1_;pcE_`aXfbq[+G!ICc$m47L'J)J2s<1*2&O^[TnG3thA*;[O?A/O-%ohU5%@K&j:O8#_IG3nlikJO!<OYlM*pgoaa65sp[^F8+OB;nDUj#0o"q^@;+=\d,#pIXOgV/:Gn`41Y78\Zh?%JZqbOi=Y)e&S+FR;Yf7L?!IoaoHj@`B9@Rmh`Z)[5<DYP=n31hTD>RbY`,SV^Q#98PZYbtQ\LluD,8=&BmnkLP28V2,2!>$7P&X4C[h&Z!T8=m`$XGhTQ7V/D2n.%K&gD2(NkfU_\3=)QH4:>g1+q3D"hEEOo?<-#BGM%fAXHl5\fLNT#+5Wpa^rifuAJODSd.-S1is6QSq$os9NT"NT"fj0<#KCme]*Dl^2rZ,E.o\th2NSZS2m@@g;d]ho\,k*5YQHj2+,$m#C$n)Il["WD8C)TASV+r$Ts\4*)JTMjd>_t/_.W'U,dpg:Y'Z6o442>I<St0jd_P`K!+^5_ZAE;]?,p/eJtLCn_,d_)hF$&n"ANsFkd[XH_dc_S#dgUt>JNo<k&\o5+2Vh[4Gha&)mXMW^2??3o_W1845Osk7uK6&8KV9TGtn[]es+,sXftTZ0nFM\e';(Z[C,R@q]#2-6_J(M"]l1U_Ig1Z;M;u.]3'O\o\P)XpWhqY#+)e7%q5[L.d_0EqSEWZ'lSSHdg9\JL?.:4Kd!OG]M(+EVN"XA2mTP-hL!kbemirjbB>s9)n0u!5[;^G][<b9i_>%1hf;`m-N15s-[U>kTaIG4:5!i,j8$$>?)>O:B$;&!Z?=E:K-$gC#\/NPJW1O-6/'8O.oX$jS.%7\Pb0hi<B_SH8AXV+9^PF(WXYRf>+sB0*i'g+]PXIHGWVq6Kel1+%R3s@=ip?SIQD'c\'R`/#!25Y;.9;GG\(O!d>qc+K3#H6S2-TDT1/:"5:U(4';.W,Vu~>endstream
 endobj
 18 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1460
+/Contents 19 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 20 0 R
+/F2 8 0 R
+/F2-0 21 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+19 0 obj
+<<
+/Length 3380
 >>
 stream
-Gb!#[gMYe)&:O:SbY&O,Y[pZGFm7Z#?FLCWTLh'C!r.K.Ec%\bXEiJ9rVFf9/)MQrJ;Z"<?-s:aR58L<bUeA\s&f2"/\mhZ*1\im)(\h(ng'"04.%\pY4e$i8pQsn;AW>qQ$CR>1]r*0f>Z45(.hPa!ihb:<E3+.26:-Q-#&Wa_')B=MDp``1LBW"cLH9E;<,YQLSV"lcL@9\d8Y3@K.7J\^GO'@ro!sfKp#H`r>,*>a0V!*qm/;qREn&K^;0*rjQq-].kJENiq7q&3TCEAMdegG^0cUa6O)]kK)L(;"rdfRi;:E;kH/&ph<A>9]IORS@q>[taI"Aj]V_b_fT"Jk.e:,FMC2ZK(n^sGA8*mGn%AAs`dZ\j(mH<gU8qHAV5u)VO;(r1226u).7S/iPhhFjdq`IS@bbGBp5f6@rHYjH3/?dj\VCAZ3e,Et0gm?K?sj5JWbD'Ip&UHt6jd!]4)au@9q'DrR:erpVANjP%5uB`2kI8!#O;fY>n3hRNM!P_"9D-kF"Z*6DiJr0)lUs:>f/=Io?mkn!35e5alqL\XGg)`1%E?4iq)L:QF(J)<L4Vr46+5_(Y7#\UI&I06Ya#%-D@7h:Lu\#YUEkEb'+]8]:hLb%aK?kdULW:nK3ibNd/)UIIbfC%5%((mJr0tot_Y@2)(m':0D&J5JpC8?ej6H%?1Lrc;oq=7Xr3q`Z'bdo.@JQn4I.>#.$$d.4t[#Qh2jk7IVT!O"XUip^01O4qfmC5C.E1rtp.(ceD[sXi_VB,o*F_<PZZ4[sHjs?LpIf;eY*ma!O7JZ>"K0WR]mcELq8^K9`s*eV85"@Do%YM^&+&mW&l6,K/ErLEJgA:5f!.p:G#8dDgTZX"h@ml4HZ?ME][ncl55nWK1^gjL%J1r_O-=`&J3n#L;B0i%[rG0Cl3^od%!jh]]Y8P@j=5gE'FshR;Ke+HY&iBE&'7@Xu^<72:K"@U86q\o5!cdWg0?X_d(HBVLLoZ,g-p0jSrHh&/[P]HGReP"?)q@3KahM4F1q&:"5_0c+=)Z_gZ5NJ05AMg;]TJ?PcBluSkW%@O5R=HsX&XQ$N/=M[Ia)93<,f)9DHc?CQMKZG^,(:,b@Up]SkVSNk$^fki.h07';TF'?ogWJ9m@iF"&A:f>?Wl5V*!lJ?'BS&[dLpq=-m'$R^TP]o.V/8_j]>ZgjCj/JaX/nPK-&Xh3LCG":l8jp60aWWgJjp7sUUGR#XuFZ\[4BcMVFVjg`_gAKNAUE7N/!D*Etri'3%I(#8NYq%KmPC<Dt2I64\m9_]9J:74,ao/)>=Z_NE1SI<f>0]*6<Vd6t("$ZnXeMm+aD._+"<t$&eD%'E7&G`7mk>Plk1jFbIOTKMP.bMAiVF*qN"[$q2E]K>%ePh[d%;[OiT*`M%=^Tt0,i6)@%>W8_@STSj4nkD8R3"T'--.>d*D0b!s6p?uZ;NI=_0pS]7PhS7?\#."~>endstream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+0.980392 0.968627 0.94902 rg
+n
+0 0 595.2756 841.8898 re
+f*
+0.082353 0.05098 0.031373 rg
+n
+0 0 595.2756 34 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 28 12 Tm
+T*
+ET
+BT
+1 0 0 1 413.3066 12 Tm
+(Module 2 \227 VDI vs Auto-Entrepreneur) Tj
+T*
+ET
+0.541176 0.521569 0.501961 rg
+BT
+/F1 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 295.4138 20 Tm
+(2) Tj
+T*
+ET
+Q
+q
+1 0 0 1 51 773.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 4) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 741.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Comparatif géant \(13 critères\)) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 721.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Micro-entreprise : meilleure retraite dès le 1er euro, meilleur accès au crédit.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 701.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 VDI : simplicité maximale au démarrage, société souvent accompagnante.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 681.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Aucun statut n'est universellement supérieur \227 tout dépend du profil.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 663.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 5) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 631.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Quel statut choisir ?) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 611.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 6 profils : salariée, étudiante, retraitée, demandeuse d'emploi, parent au foyer, entrepreneure.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 591.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Le choix n'est jamais définitif \227 une transition reste toujours possible.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 573.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 6) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 541.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(15 études de cas) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 521.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Chaque recommandation découle d'une analyse de la situation réelle de la personne.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 501.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Cumul de sociétés, dépassement de plafond, croissance d'équipe : cas nuancés traités.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 483.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 7) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 451.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Les 30 erreurs fréquentes) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 431.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 5 catégories : choix du statut, déclarations, cotisations/fiscalité, gestion, croissance.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 411.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 Chaque erreur listée avec sa conséquence et sa solution concrète.) Tj
+T*
+ET
+Q
+Q
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.082353 0.05098 0.031373 rg
+n
+0 0 165 30 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2-0 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 28 10 Tm
+(PHOENIX PARTNERS) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+20 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+21 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+22 0 obj
+<<
+/Contents 23 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 24 0 R
+/F2 8 0 R
+/F2-0 25 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+23 0 obj
+<<
+/Length 4363
+>>
+stream
+q
+1 0 0 1 0 0 cm
+BT
+/F1 12 Tf
+14.4 TL
+ET
+q
+0.980392 0.968627 0.94902 rg
+n
+0 0 595.2756 841.8898 re
+f*
+0.082353 0.05098 0.031373 rg
+n
+0 0 595.2756 34 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2 8.5 Tf
+10.2 TL
+ET
+BT
+1 0 0 1 28 12 Tm
+T*
+ET
+BT
+1 0 0 1 413.3066 12 Tm
+(Module 2 \227 VDI vs Auto-Entrepreneur) Tj
+T*
+ET
+0.541176 0.521569 0.501961 rg
+BT
+/F1 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 295.4138 20 Tm
+(3) Tj
+T*
+ET
+Q
+q
+1 0 0 1 51 773.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 8) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 741.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(FAQ de 50 questions) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 721.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 5 catégories : choix du statut, cotisations, fiscalité/TVA, démarches, situations particulières.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 703.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4 Tm
+/F2 8 Tf
+12 TL
+(CHAPITRE 9) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 671.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Les démarches pas à pas) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 651.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 5 étapes détaillées en 27 sous-actions concrètes.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 631.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 0 4.3 Tm
+/F1 9.7 Tf
+14 TL
+(\177 De la réflexion initiale jusqu'au suivi des échéances dans la durée.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 615.8898 cm
+Q
+q
+1 0 0 1 51 613.8898 cm
+q
+1 w
+1 J
+0.909804 0.87451 0.815686 RG
+n
+0 0 m
+493.2756 0 l
+S
+Q
+Q
+q
+1 0 0 1 51 581.8898 cm
+q
+0.788235 0.635294 0.360784 rg
+BT
+1 0 0 1 0 4.5 Tm
+/F3 13.5 Tf
+18 TL
+(Checklist de validation finale) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 560.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( Je comprends pourquoi le VDI et la micro-entreprise existent tous les deux.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 540.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( Je connais les trois formes du VDI.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 520.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( Je comprends les différences de cotisations, retraite, maladie et chômage.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 500.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( Je sais comment créer une micro-entreprise et ses obligations principales.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 480.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai consulté le comparatif complet sur les 13 critères.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 460.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai identifié le profil qui correspond le plus à ma situation.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 440.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai repéré les erreurs fréquentes qui me concernent le plus.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 420.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( Je sais où retrouver la FAQ complète en cas de besoin.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 400.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai une vision claire des 5 étapes pour choisir et déclarer mon statut.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 380.8898 cm
+q
+0.164706 0.141176 0.12549 rg
+BT
+1 0 0 1 4 5.5 Tm
+/F1 9.5 Tf
+15 TL
+/F6 9.5 Tf
+15 TL
+(n) Tj
+/F1 9.5 Tf
+15 TL
+( J'ai validé le quiz avec au moins 70% de bonnes réponses.) Tj
+T*
+ET
+Q
+Q
+q
+1 0 0 1 51 359.8898 cm
+Q
+q
+1 0 0 1 51 333.8898 cm
+q
+0.541176 0.521569 0.501961 rg
+BT
+1 0 0 1 0 17 Tm
+/F5 9 Tf
+13 TL
+(Une fois cette checklist entièrement cochée, tu disposes de toutes les clés nécessaires pour choisir ton statut en toute) Tj
+T*
+(connaissance de cause.) Tj
+T*
+ET
+Q
+Q
+Q
+
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+0.082353 0.05098 0.031373 rg
+n
+0 0 165 30 re
+f*
+0.909804 0.784314 0.454902 rg
+BT
+/F2-0 8 Tf
+9.6 TL
+ET
+BT
+1 0 0 1 28 10 Tm
+(PHOENIX PARTNERS) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+24 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+25 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
 endobj
 xref
-0 19
+0 26
 0000000000 65535 f 
-0000000061 00000 n 
-0000000143 00000 n 
-0000000250 00000 n 
-0000000362 00000 n 
-0000000470 00000 n 
-0000000580 00000 n 
-0000000785 00000 n 
-0000000900 00000 n 
-0000001105 00000 n 
-0000001310 00000 n 
-0000001394 00000 n 
-0000001600 00000 n 
-0000001670 00000 n 
-0000001951 00000 n 
-0000002030 00000 n 
-0000002657 00000 n 
-0000004136 00000 n 
-0000005422 00000 n 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000134 00000 n 
+0000000183 00000 n 
+0000000482 00000 n 
+0000001561 00000 n 
+0000001668 00000 n 
+0000001775 00000 n 
+0000001887 00000 n 
+0000001996 00000 n 
+0000002105 00000 n 
+0000002216 00000 n 
+0000002332 00000 n 
+0000002416 00000 n 
+0000002719 00000 n 
+0000006409 00000 n 
+0000006517 00000 n 
+0000006630 00000 n 
+0000006933 00000 n 
+0000010366 00000 n 
+0000010474 00000 n 
+0000010587 00000 n 
+0000010890 00000 n 
+0000015306 00000 n 
+0000015414 00000 n 
 trailer
 <<
-/ID 
-[<f4c8d40e6ddd1694532051d990fb589b><f4c8d40e6ddd1694532051d990fb589b>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 13 0 R
-/Root 12 0 R
-/Size 19
+/Size 26
+/Root 3 0 R
+/Info 1 0 R
 >>
 startxref
-6974
+15527
 %%EOF
