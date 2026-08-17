@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rejoins mon équipe</title>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
 <style>
 * { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:Arial,sans-serif; background:#f8f3ee; color:#3a3a3a; }
@@ -58,16 +56,6 @@ body { font-family:Arial,sans-serif; background:#f8f3ee; color:#3a3a3a; }
 <div id="app"><div class="loading">⏳ Chargement...</div></div>
 
 <script>
-firebase.initializeApp({
-  apiKey: "AIzaSyC94wzVrEtrqxhshdFsRHR7HiL5wJEkYG0",
-  authDomain: "beauty-addict-academy.firebaseapp.com",
-  projectId: "beauty-addict-academy",
-  storageBucket: "beauty-addict-academy.firebasestorage.app",
-  messagingSenderId: "311669980538",
-  appId: "1:311669980538:web:eaf8a95e987473c6412ac3"
-});
-var db = firebase.firestore();
-
 function getUid() { return new URLSearchParams(window.location.search).get("uid"); }
 
 var ICONES = ["🤝", "🎓", "🌿", "⏰", "💛"];
@@ -285,10 +273,13 @@ function renderPage(t) {
       return;
     }
     submitBtn.disabled = true; submitBtn.textContent = "⏳ Envoi en cours...";
-    db.collection("prospects_recrutement_formations").add({
-      prenom: prenom, nom: nom, email: email, tel: tel, motiv: motiv,
-      recruteurUid: uid, recruteurPrenom: t.prenom || "", recruteurEmail: t.email || "",
-      date: new Date().toISOString(), statut: "nouveau"
+    fetch('/api/recruitment-prospect', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prenom: prenom, nom: nom, email: email, tel: tel, motiv: motiv, recruteurUid: uid })
+    }).then(function(response) {
+      if (!response.ok) throw new Error('prospect-submit-failed');
+      return response.json();
     }).then(function() {
       formCard.innerHTML = "<div style='text-align:center;padding:20px 0;'><p style='font-size:50px;margin-bottom:12px;'>🎉</p><h2 style='color:#27AE60;margin-bottom:8px;'>Merci " + prenom + " !</h2><p style='color:#666;font-size:14px;line-height:1.6;'>" + (t.prenom || "Ta contact") + " va te recontacter très vite.</p></div>";
       if (t.lienParrainage) {
@@ -316,13 +307,15 @@ function renderPage(t) {
 
 var uid = getUid();
 if (uid) {
-  db.collection("acheteurs_formations").doc(uid).get().then(function(snap) {
-    var data = snap.data();
-    if (data && data.tunnelRecrutement && data.tunnelRecrutement.societe) {
-      renderPage(data.tunnelRecrutement);
-    } else {
+  fetch('/api/recruitment-tunnel?uid=' + encodeURIComponent(uid)).then(function(response) {
+    if (response.status === 404) {
       document.getElementById("app").innerHTML = "<div class='loading'>Ce tunnel n'a pas encore été configuré.</div>";
+      return null;
     }
+    if (!response.ok) throw new Error('tunnel-load-failed');
+    return response.json();
+  }).then(function(data) {
+    if (data && data.tunnel) renderPage(data.tunnel);
   }).catch(function() {
     document.getElementById("app").innerHTML = "<div class='loading'>Lien invalide.</div>";
   });

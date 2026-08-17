@@ -398,33 +398,17 @@ footer a { color:#c9a86a; text-decoration:none; }
   <p>© 2025 Académie Beauty Addict — <a href="https://academie-beauty-addict.com">academie-beauty-addict.com</a></p>
 </footer>
 
-<!-- Firebase pour stats dynamiques -->
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
 <script>
-firebase.initializeApp({
-  apiKey:"AIzaSyC94wzVrEtrqxhshdFsRHR7HiL5wJEkYG0",
-  authDomain:"beauty-addict-academy.firebaseapp.com",
-  projectId:"beauty-addict-academy",
-  storageBucket:"beauty-addict-academy.firebasestorage.app",
-  messagingSenderId:"311669980538",
-  appId:"1:311669980538:web:eaf8a95e987473c6412ac3"
-});
-
-var db = firebase.firestore();
-
-// Charger stats depuis Firebase
-db.collection("landing_stats").doc("global").get().then(function(snap) {
-  if (snap.exists) {
-    var d = snap.data();
-    if (d.formations) document.getElementById("stat-formations").textContent = d.formations;
-    if (d.outils) document.getElementById("stat-outils").textContent = d.outils;
-  }
-});
-
-// Membres actives en temps réel depuis Firebase
-db.collection("users").where("accountStatus","==","active").get().then(function(snap) {
-  document.getElementById("stat-membres").textContent = snap.size;
+// Les statistiques publiques sont servies par une API qui ne renvoie que les trois compteurs affichés.
+fetch('/api/public-stats').then(function(response) {
+  if (!response.ok) throw new Error('stats-unavailable');
+  return response.json();
+}).then(function(stats) {
+  if (typeof stats.membres === 'number') document.getElementById("stat-membres").textContent = stats.membres;
+  if (typeof stats.formations === 'number') document.getElementById("stat-formations").textContent = stats.formations;
+  if (typeof stats.outils === 'number') document.getElementById("stat-outils").textContent = stats.outils;
+}).catch(function() {
+  // Les valeurs déjà présentes dans la page restent visibles en cas d'indisponibilité temporaire.
 });
 
 // Animations scroll

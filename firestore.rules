@@ -1,0 +1,49 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function ownsProfile(userId) { return signedIn() && request.auth.uid == userId; }
+
+    match /acheteurs_formations/{userId} {
+      allow get: if ownsProfile(userId);
+      allow list, create, delete: if false;
+      allow update: if ownsProfile(userId)
+        && !('motDePasse' in request.resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'progression', 'dernierModuleId', 'favorisLecons', 'notesLecons',
+          'favoris', 'notesPerso', 'photoURL', 'prenom', 'nom', 'email',
+          'telephone', 'reseauxSociaux', 'coachConversation', 'suiviObjectif',
+          'cartesVisite', 'tunnelRecrutement'
+        ]);
+    }
+
+    match /affilies/{affiliateId} {
+      allow get, list: if signedIn()
+        && resource.data.email == request.auth.token.email;
+      allow create, update, delete: if false;
+    }
+
+    match /cartesVisite/{cardId} {
+      allow get: if true;
+      allow list: if false;
+      allow create: if signedIn() && request.resource.data.ownerId == request.auth.uid;
+      allow update: if signedIn()
+        && (resource.data.ownerId == request.auth.uid
+          || (!resource.data.keys().hasAny(['ownerId']) && cardId.matches(request.auth.uid + '_.*')))
+        && request.resource.data.ownerId == request.auth.uid;
+      allow delete: if signedIn()
+        && (resource.data.ownerId == request.auth.uid
+          || (!resource.data.keys().hasAny(['ownerId']) && cardId.matches(request.auth.uid + '_.*')));
+    }
+
+    match /certificats_publics/{certificateId} {
+      allow get: if true;
+      allow list, create, update, delete: if false;
+    }
+
+    match /ventes_formations/{saleId} { allow read, write: if false; }
+    match /commissions/{commissionId} { allow read, write: if false; }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

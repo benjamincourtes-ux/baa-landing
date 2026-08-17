@@ -1,0 +1,12 @@
+# Local dependencies: reproducible from package-lock.json, never versioned.
+node_modules/
+
+# Firebase Admin credentials and other local secrets.
+firebase-secrets/
+serviceAccountKey*.json
+*-firebase-adminsdk-*.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
