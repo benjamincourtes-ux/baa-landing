@@ -72,7 +72,7 @@ module.exports = async (req, res) => {
       prenom, nom, email, tel, motiv,
       recruteurUid: uid,
       recruteurPrenom: text(tunnel.prenom || recruiter.prenom, 80),
-      recruteurEmail,
+      recruteurEmail: recruiterEmail,
       date: new Date().toISOString(),
       statut: 'nouveau'
     });
